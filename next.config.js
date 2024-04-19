@@ -15,6 +15,18 @@ const nextConfig = withStoreConfig({
       },
       {
         protocol: "https",
+        hostname: "images.pexels.com",
+      },
+      {
+        protocol: "https",
+        hostname: "placehold.co",
+      },
+      {
+        protocol: "https",
+        hostname: "2e5b6190808c6167ff8748f7db8be2e6.r2.cloudflarestorage.com",
+      },
+      {
+        protocol: "https",
         hostname: "medusa-public-images.s3.eu-west-1.amazonaws.com",
       },
       {

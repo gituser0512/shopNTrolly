@@ -4,9 +4,12 @@ import { listRegions } from "@lib/data"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
+import Image from 'next/image'
+import logo from "../../../../../public/icon.png"
 
 export default async function Nav() {
   const regions = await listRegions().then((regions) => regions)
+  
 
   return (
     <div className="sticky top-0 inset-x-0 z-50 group">
@@ -19,12 +22,18 @@ export default async function Nav() {
           </div>
 
           <div className="flex items-center h-full">
+            <Image
+                src={logo}
+                alt="logo"
+                width={65}
+                height={65}
+              />
             <LocalizedClientLink
               href="/"
               className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
               data-testid="nav-store-link"
             >
-              Medusa Store
+              Shop N Trolly
             </LocalizedClientLink>
           </div>
 

@@ -17,7 +17,7 @@ type ThumbnailProps = {
 const Thumbnail: React.FC<ThumbnailProps> = ({
   thumbnail,
   images,
-  size = "small",
+  size = "medium",
   isFeatured,
   className,
   'data-testid': dataTestid
@@ -56,9 +56,10 @@ const ImageOrPlaceholder = ({
       alt="Thumbnail"
       className="absolute inset-0 object-cover object-center"
       draggable={false}
-      quality={50}
+      quality={100}
       sizes="(max-width: 576px) 280px, (max-width: 768px) 360px, (max-width: 992px) 480px, 800px"
       fill
+
     />
   ) : (
     <div className="w-full h-full absolute inset-0 flex items-center justify-center">

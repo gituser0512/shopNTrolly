@@ -103,6 +103,7 @@ const Shipping: React.FC<ShippingProps> = ({
             >
               {availableShippingMethods ? (
                 availableShippingMethods.map((option) => {
+                  console.log(option, "options for shipping")
                   return (
                     <RadioGroup.Option
                       key={option.id}
@@ -148,7 +149,7 @@ const Shipping: React.FC<ShippingProps> = ({
 
           <Button
             size="large"
-            className="mt-6"
+            className="mt-6 bg-[#ffc600] text-black"
             onClick={handleSubmit}
             isLoading={isLoading}
             disabled={!cart.shipping_methods[0]}

@@ -23,6 +23,14 @@ const OptionSelect: React.FC<OptionSelectProps> = ({
 }) => {
   const filteredOptions = option.values.map((v) => v.value).filter(onlyUnique)
 
+  // const categories = [
+  //   "product1",
+  //   "product2",
+
+  // ]
+
+  console.log(filteredOptions, "mana")
+
   return (
     <div className="flex flex-col gap-y-3">
       <span className="text-sm">Select {title}</span>
@@ -50,6 +58,7 @@ const OptionSelect: React.FC<OptionSelectProps> = ({
             </button>
           )
         })}
+
       </div>
     </div>
   )
