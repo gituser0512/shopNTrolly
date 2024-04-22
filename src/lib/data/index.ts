@@ -66,7 +66,7 @@ export async function createCart(data = {}) {
 
 export async function updateCart(cartId: string, data: StorePostCartsCartReq) {
   const headers = getMedusaHeaders(["cart"])
-
+  console.log(headers, "headers")
   return medusaClient.carts
     .update(cartId, data, headers)
     .then(({ cart }) => cart)

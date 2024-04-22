@@ -61,6 +61,7 @@ const Shipping: React.FC<ShippingProps> = ({
   useEffect(() => {
     setIsLoading(false)
     setError(null)
+    console.log(availableShippingMethods, "methods")
   }, [isOpen])
 
   return (
