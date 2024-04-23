@@ -19,7 +19,7 @@ const nextConfig = withStoreConfig({
       },
       {
         protocol: "https",
-        hostname: "placehold.co",
+        hostname: "shopntrolly.s3.us-east-2.amazonaws.com",
       },
       {
         protocol: "https",

@@ -69,6 +69,7 @@ module.exports = {
           "Ubuntu",
           "sans-serif",
         ],
+        reforesta: ['reforesta', 'Arial', 'sans-serif'],
       },
       keyframes: {
         ring: {
