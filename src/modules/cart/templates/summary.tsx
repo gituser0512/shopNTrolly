@@ -7,12 +7,15 @@ import Divider from "@modules/common/components/divider"
 import { CartWithCheckoutStep } from "types/global"
 import DiscountCode from "@modules/checkout/components/discount-code"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { Customer } from "@medusajs/medusa"
+import SignInPrompt from "../components/sign-in-prompt"
 
 type SummaryProps = {
-  cart: CartWithCheckoutStep
+  cart: CartWithCheckoutStep,
+  customer: Omit<Customer, "password_hash"> | null
 }
 
-const Summary = ({ cart }: SummaryProps) => {
+const Summary = ({ cart, customer }: SummaryProps) => {
   return (
     <div className="flex flex-col gap-y-4">
       <Heading level="h2" className="text-[2rem] leading-[2.75rem]">
@@ -22,7 +25,10 @@ const Summary = ({ cart }: SummaryProps) => {
       <Divider />
       <CartTotals data={cart} />
       <LocalizedClientLink href={"/checkout?step=" + cart.checkout_step} data-testid="checkout-button">
-        <Button className="w-full h-10 bg-[#ffc600] text-black">Go to checkout</Button>
+        {customer == null ? 
+          <SignInPrompt />
+        :  <Button className="w-full h-10 bg-[#ffc600] text-black">Go to checkout</Button>
+         }
       </LocalizedClientLink>
     </div>
   )

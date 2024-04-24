@@ -19,7 +19,15 @@ const nextConfig = withStoreConfig({
       },
       {
         protocol: "https",
+        hostname: "www.pexels.com",
+      },
+      {
+        protocol: "https",
         hostname: "shopntrolly.s3.us-east-2.amazonaws.com",
+      },
+      {
+        protocol: "https",
+        hostname: "tailwindui.com",
       },
       {
         protocol: "https",

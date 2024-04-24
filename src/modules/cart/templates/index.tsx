@@ -13,6 +13,9 @@ const CartTemplate = ({
   cart: CartWithCheckoutStep | null
   customer: Omit<Customer, "password_hash"> | null
 }) => {
+
+  console.log(customer, "customer name")
+
   return (
     <div className="py-12">
       <div className="content-container" data-testid="cart-container">
@@ -32,7 +35,9 @@ const CartTemplate = ({
                 {cart && cart.region && (
                   <>
                     <div className="bg-white py-6">
-                      <Summary cart={cart} />
+                    
+                          <Summary cart={cart}  customer={customer}/>
+               
                     </div>
                   </>
                 )}
