@@ -125,12 +125,12 @@ export default async function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://docs.medusajs.com"
+                    href="privacy-policy"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base text-base"
                   >
-                    Documentation
+                    Privacy Policy
                   </a>
                 </li>
                 <li>
