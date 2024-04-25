@@ -1,6 +1,6 @@
-import UnderlineLink from "@modules/common/components/underline-link"
-import Image from "next/image"
-import HeroImg from "../../../../../public/hero.jpg"
+"use client"
+import ReactPlayer from 'react-player/youtube'
+
 
 const Testimonials = () => {
   return (
@@ -15,12 +15,7 @@ const Testimonials = () => {
           <div className="flex-grow order-2 lg:order-1">
             <blockquote className="text-lg text-gray-900 sm:text-lg max-w-[60ch]">
               <p>
-                I recently purchased a pair of heels from your shop and I have
-                to say, I am absolutely thrilled with them! They fit perfectly
-                and the quality is top notch. I love the stylish look and feel
-                of the heels and I can&apos;t wait to wear them again. The
-                shipping was fast and the customer service was amazing. I highly
-                recommend Shoptrolly for all your heel needs! 💕
+                I recently purchased a Rainbow Unicorn Color Kids Art Drawing Set SHOPNTROLLY and I have to say, My daughter liked the art set.  It is a small suitcase and the quality of colors is very good and there are 32 shades of colors.  My daughter liked it very much because it has a brush set, watercolor, sketch pen, oil pastel, and colored pencil all in one kit. 💕
               </p>
             </blockquote>
             <div className="flex items-center justify-start gap-2 mt-4">
@@ -29,17 +24,12 @@ const Testimonials = () => {
                 src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                 alt="avatar"
               />
-              <p className="font-medium text-gray-900 ">Wanda Maximoff</p>
+              <p className="font-medium text-gray-900 ">Rutwa's Mom</p>
             </div>
           </div>
           <div className="flex-grow order-1 lg:order-2">
-            <Image
-              src="https://images.pexels.com/photos/336372/pexels-photo-336372.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Your Image Description"
-              className="w-full h-full rounded-lg shadow-lg aspect-auto"
-              height={600}
-              width={600}
-            />
+
+            <ReactPlayer url='https://youtu.be/pwMbCJoLmDc' width='540px' height='360px' controls/>
           </div>
         </div>
       </div>
