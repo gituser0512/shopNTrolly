@@ -30,7 +30,7 @@ const sortOptions = [
 const SortProducts = ({ 'data-testid': dataTestId,  sortBy, setQueryParams }: SortProductsProps) => {
   const handleChange = (e: ChangeEvent<HTMLButtonElement>) => {
     const newSortBy = e.target.value as SortOptions
-    setQueryParams("sortBy", newSortBy)
+    setQueryParams("sortCategoryBy", newSortBy)
   }
 
   return (

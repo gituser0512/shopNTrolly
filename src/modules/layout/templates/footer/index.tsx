@@ -115,12 +115,12 @@ export default async function Footer() {
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 <li>
                   <a
-                    href="https://github.com/medusajs"
+                    href="/aboutus"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base text-base"
                   >
-                    GitHub
+                    About Us
                   </a>
                 </li>
                 <li>

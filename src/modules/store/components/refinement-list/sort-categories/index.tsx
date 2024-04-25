@@ -4,15 +4,15 @@ import { ChangeEvent } from "react"
 
 import FilterRadioGroup from "@modules/common/components/filter-radio-group"
 
-export type SortOption = "brand" | "model" 
+export type SortCategoryOption = "brand" | "model" 
 
 type SortCategoriesProps = {
-    sortByCategory: SortOption
-  setQueryParams: (name: string, value: SortOption) => void
+  sortByCategory: SortCategoryOption
+  setQueryParams: (name: string, value: SortCategoryOption) => void
   'data-testid'?: string
 }
 
-const sortOptions = [
+const sortCategoryOption = [
   {
     value: "brand",
     label: "Brands",
@@ -23,16 +23,16 @@ const sortOptions = [
   },
 ]
 
-const sortCategories = ({ 'data-testid': dataTestId, sortByCategory, setQueryParams }: SortCategoriesProps) => {
+const SortCategories = ({ 'data-testid': dataTestId, sortByCategory, setQueryParams }: SortCategoriesProps) => {
   const handleChange = (e: ChangeEvent<HTMLButtonElement>) => {
-    const newSortBy = e.target.value as SortOption
+    const newSortBy = e.target.value as SortCategoryOption
     setQueryParams("sortBy", newSortBy)
   }
 
   return (
     <FilterRadioGroup
-      title="Sort by"
-      items={sortOptions}
+      title="Sort by Category"
+      items={sortCategoryOption}
       value={sortByCategory}
       handleChange={handleChange}
       data-testid={dataTestId}
@@ -40,4 +40,4 @@ const sortCategories = ({ 'data-testid': dataTestId, sortByCategory, setQueryPar
   )
 }
 
-export default sortCategories
+export default SortCategories
