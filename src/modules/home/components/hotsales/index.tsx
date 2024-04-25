@@ -1,20 +1,33 @@
-
+import Image from 'next/image'
+import Hotsale from '../../../../../public/home-page-01-hero-full-width.jpg'
+import UnderlineLink from '@modules/common/components/underline-link'
 
 const HotSales = () => {
   return (
-  <section className="bg-white dark:bg-gray-900">
-    <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-        <div className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">We didn&apos;t reinvent the wheel</h2>
-            <p className="mb-4">We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need.</p>
-            <p>We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick.</p>
-        </div>
-        <div className="grid grid-cols-2 gap-4 mt-8">
-            <img className="w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png" alt="office content 1" />
-            <img className="mt-4 w-full lg:mt-10 rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png" alt="office content 2" />
-        </div>
+    <div className="h-[45vh] md:h-[90vh] w-full relative">
+    <div className="text-white absolute inset-0 z-10 flex flex-col justify-center items-center text-center ">
+      <h1 className="text-3xl-semi drop-shadow-md shadow-black">
+        New arrivals are here
+      </h1>
+      <p className="text-lg-regular max-w-[32rem] mb-6 drop-shadow-md shadow-black">
+      The new arrivals have, well, newly arrived. Check out the latest options from our summer small-batch release while they're still in stock.
+      </p>
+      <UnderlineLink href="/store">
+          <p className="font-semibold">Explore products</p>
+        </UnderlineLink>
     </div>
-    </section>
+    <Image
+      src={Hotsale}
+      loading="eager"
+      priority={true}
+      quality={90}
+      alt="Photo"
+      className="absolute inset-0 object-cover z-0"
+      draggable="false"
+      fill
+      sizes="100vw"
+    />
+  </div>
   )
 }
 
