@@ -30,6 +30,7 @@ const HotSales = () => {
                         <Image
                           height={100}
                           width={100}
+                          quality={100}
                           src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
                           alt=""
                           className="h-full w-full object-cover object-center"
@@ -39,6 +40,7 @@ const HotSales = () => {
                         <Image
                           height={100}
                           width={100}
+                          quality={100}
                           src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
                           alt=""
                           className="h-full w-full object-cover object-center"
@@ -50,6 +52,7 @@ const HotSales = () => {
                         <Image
                           height={100}
                           width={100}
+                          quality={100}
                           src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
                           alt=""
                           className="h-full w-full object-cover object-center"
@@ -59,6 +62,7 @@ const HotSales = () => {
                         <Image
                           height={100}
                           width={100}
+                          quality={100}
                           src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
                           alt=""
                           className="h-full w-full object-cover object-center"
@@ -68,6 +72,7 @@ const HotSales = () => {
                         <Image
                           height={100}
                           width={100}
+                          quality={100}
                           src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
                           alt=""
                           className="h-full w-full object-cover object-center"
@@ -79,6 +84,7 @@ const HotSales = () => {
                         <Image
                           height={100}
                           width={100}
+                          quality={100}
                           src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
                           alt=""
                           className="h-full w-full object-cover object-center"
@@ -88,6 +94,7 @@ const HotSales = () => {
                         <Image
                           height={100}
                           width={100}
+                          quality={100}
                           src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
                           alt=""
                           className="h-full w-full object-cover object-center"

@@ -39,6 +39,7 @@ export default function ProductPrice({
         <span
           data-testid="product-price"
           data-value={selectedPrice.calculated_price_number}
+          className="font-semibold text-xl-semi"
         >
           {selectedPrice.calculated_price}
         </span>
@@ -46,7 +47,7 @@ export default function ProductPrice({
       {selectedPrice.price_type === "sale" && (
         <>
           <p>
-            <span className="text-ui-fg-subtle">Original: </span>
+            <span className="text-ui-fg-subtle ">Original: </span>
             <span
               className="line-through"
               data-testid="original-product-price"
