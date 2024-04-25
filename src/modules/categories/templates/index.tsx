@@ -8,17 +8,20 @@ import RefinementList from "@modules/store/components/refinement-list"
 import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import PaginatedProducts from "@modules/store/templates/paginated-products"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { SortCategoryOption } from "@modules/store/components/refinement-list/sort-categories"
 
 export default function CategoryTemplate({
   categories,
   sortBy,
   page,
   countryCode,
+  sortByCategory
 }: {
   categories: ProductCategoryWithChildren[]
   sortBy?: SortOptions
   page?: string
   countryCode: string
+  sortByCategory?: SortCategoryOption
 }) {
   const pageNumber = page ? parseInt(page) : 1
 
@@ -29,7 +32,7 @@ export default function CategoryTemplate({
 
   return (
     <div className="flex flex-col small:flex-row small:items-start py-6 content-container" data-testid="category-container">
-      <RefinementList sortBy={sortBy || "created_at"} data-testid="sort-by-container" />
+      <RefinementList sortBy={sortBy || "created_at"} sortByCategory={sortByCategory || 'brand'} data-testid="sort-by-container" />
       <div className="w-full">
         <div className="flex flex-row mb-8 text-2xl-semi gap-4">
           {parents &&
