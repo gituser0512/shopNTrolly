@@ -146,11 +146,14 @@ const Shipping: React.FC<ShippingProps> = ({
             </RadioGroup>
           </div>
 
-          <ErrorMessage error={error} data-testid="delivery-option-error-message" />
+          <ErrorMessage
+            error={error}
+            data-testid="delivery-option-error-message"
+          />
 
           <Button
             size="large"
-            className="mt-6 bg-[#ffc600] text-black"
+            className="mt-6 bg-[#ffc600] hover:bg-[#ffc600]/40 text-black"
             onClick={handleSubmit}
             isLoading={isLoading}
             disabled={!cart.shipping_methods[0]}

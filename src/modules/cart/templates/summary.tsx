@@ -11,7 +11,7 @@ import { Customer } from "@medusajs/medusa"
 import SignInPrompt from "../components/sign-in-prompt"
 
 type SummaryProps = {
-  cart: CartWithCheckoutStep,
+  cart: CartWithCheckoutStep
   customer: Omit<Customer, "password_hash"> | null
 }
 
@@ -24,11 +24,17 @@ const Summary = ({ cart, customer }: SummaryProps) => {
       <DiscountCode cart={cart} />
       <Divider />
       <CartTotals data={cart} />
-      <LocalizedClientLink href={"/checkout?step=" + cart.checkout_step} data-testid="checkout-button">
-        {customer == null ? 
+      <LocalizedClientLink
+        href={"/checkout?step=" + cart.checkout_step}
+        data-testid="checkout-button"
+      >
+        {customer == null ? (
           <SignInPrompt />
-        :  <Button className="w-full h-10 bg-[#ffc600] text-black">Go to checkout</Button>
-         }
+        ) : (
+          <Button className="w-full h-10 bg-[#ffc600] hover:bg-[#ffc600]/40 text-black">
+            Go to checkout
+          </Button>
+        )}
       </LocalizedClientLink>
     </div>
   )

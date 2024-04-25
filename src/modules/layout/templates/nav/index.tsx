@@ -4,12 +4,12 @@ import { listRegions } from "@lib/data"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
-import Image from 'next/image'
+import Image from "next/image"
 import logo from "../../../../../public/icon.png"
+import Link from "next/link"
 
 export default async function Nav() {
   const regions = await listRegions().then((regions) => regions)
-  
 
   return (
     <div className="sticky top-0 inset-x-0 z-50 group">
@@ -22,22 +22,26 @@ export default async function Nav() {
           </div>
 
           <div className="flex items-center h-full">
-            <Image
+            <Link href="/">
+              <Image
                 src={logo}
                 alt="logo"
-                width={65}
-                height={65}
+                width={62}
+                height={62}
+                quality={100}
+                priority
               />
+            </Link>
             <LocalizedClientLink
               href="/"
-              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
+              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase hidden md:block"
               data-testid="nav-store-link"
             >
               Shop N Trolly
             </LocalizedClientLink>
           </div>
 
-          <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
+          <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end text-base">
             <div className="hidden small:flex items-center gap-x-6 h-full">
               {process.env.FEATURE_SEARCH_ENABLED && (
                 <LocalizedClientLink
@@ -50,7 +54,7 @@ export default async function Nav() {
                 </LocalizedClientLink>
               )}
               <LocalizedClientLink
-                className="hover:text-ui-fg-base"
+                className="hover:text-ui-fg-base text-base"
                 href="/account"
                 data-testid="nav-account-link"
               >
@@ -60,7 +64,7 @@ export default async function Nav() {
             <Suspense
               fallback={
                 <LocalizedClientLink
-                  className="hover:text-ui-fg-base flex gap-2"
+                  className="hover:text-ui-fg-base flex gap-2 text-base"
                   href="/cart"
                   data-testid="nav-cart-link"
                 >

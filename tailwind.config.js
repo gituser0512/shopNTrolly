@@ -59,17 +59,17 @@ module.exports = {
         "3xl": "2rem",
       },
       fontFamily: {
-        sans: [
-          "Inter",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "Segoe UI",
-          "Roboto",
-          "Helvetica Neue",
-          "Ubuntu",
-          "sans-serif",
-        ],
-        reforesta: ['reforesta', 'Arial', 'sans-serif'],
+        // sans: [
+        //   "Work Sans",
+        //   "-apple-system",
+        //   "BlinkMacSystemFont",
+        //   "Segoe UI",
+        //   "Roboto",
+        //   "Helvetica Neue",
+        //   "Ubuntu",
+        //   "sans-serif",
+        // ],
+        workSans: ["Work Sans", "sans-serif"],
       },
       keyframes: {
         ring: {
