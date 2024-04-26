@@ -35,14 +35,15 @@ const PaymentDetails = ({ order }: PaymentDetailsProps) => {
                 <Container className="flex items-center h-7 w-fit p-2 bg-ui-button-neutral-hover">
                   {paymentInfoMap[payment.provider_id].icon}
                 </Container>
-                <Text data-testid="payment-amount">
-                  {payment.provider_id === "stripe" && payment.data.card_last4
+                <Text data-testid="payment-amount" className="text-bold">
+                  {/* {payment.provider_id === "stripe" && payment.data.card_last4
                     ? `**** **** **** ${payment.data.card_last4}`
                     : `${formatAmount({
                         amount: payment.amount,
                         region: order.region,
                         includeTaxes: false,
-                      })} paid at ${new Date(payment.created_at).toString()}`}
+                      })} paid at ${new Date(payment.created_at).toString()}`} */}
+                      Payment must be done manually.
                 </Text>
               </div>
             </div>

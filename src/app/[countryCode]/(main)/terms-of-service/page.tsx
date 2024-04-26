@@ -131,12 +131,9 @@ const termsOfService = [
               <div className="lg:col-span-2">
                 <div className="md:pr-6 lg:pr-0">
                   <h2 className="text-3xl text-gray-950 dark:text-white font-bold">
-                    Privacy policy{" "}
+                    Terms of Service{" "}
                   </h2>
-                  <h4 className="mt-6 text-black font-semibold dark:text-gray-300">
-                    This Privacy Policy applies to the Shopntrolly.com{" "}
-                  </h4>
-  
+                
                   <ul
                     id="privacy-policy-list"
                     className="mt-6 text-gray-700 dark:text-gray-300"

@@ -143,6 +143,16 @@ export default async function Footer() {
                     Terms Of Service
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="/contact-us"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-ui-fg-base text-base"
+                  >
+                   Contact Us
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
