@@ -29,21 +29,61 @@ export default async function Aboutus() {
                                 <h4 className="mt-6 text-black font-semibold dark:text-gray-300">We get information about you from third parties.  </h4>
                                 <p className="mt-6 text-gray-700 dark:text-gray-300">For example, if you use an integrated social media feature on our websites. The third-party social media site will give us certain information about you. This could include your name and email address.</p>
 
+                                <h3 className="mt-6 text-black font-semibold dark:text-gray-300">Use of your personal information   </h3>
+                                <h4 className="mt-6 text-black font-semibold dark:text-gray-300">We use information to contact you:  </h4>
+                            
+                                <p className="mt-6 text-gray-700 dark:text-gray-300">We might use the information you provide to contact you for confirmation of a purchase on our website or for other promotional purposes. </p>
+                                <h4 className="mt-6 text-black font-semibold dark:text-gray-300">We use information to respond to your requests or questions.  </h4>
+                                <p className="mt-6 text-gray-700 dark:text-gray-300">We might use your information to confirm your registration for an event or contest.  </p>
 
+                                <h4 className="mt-6 text-black font-semibold dark:text-gray-300">We use information to improve our products and services. </h4>
+                                <p className="mt-6 text-gray-700 dark:text-gray-300">We might use your information to customize your experience with us. This could include displaying content based upon your preferences.  </p>
+
+                                <h4 className="mt-6 text-black font-semibold dark:text-gray-300">We use information to look at site trends and customer interests.   </h4>
+                                <p className="mt-6 text-gray-700 dark:text-gray-300">We may use your information to make our website and products better. We may combine information we get from you with information about you we get from third parties.   </p>
+
+                                <h4 className="mt-6 text-black font-semibold dark:text-gray-300">We use information for marketing purposes.   </h4>
+                                <p className="mt-6 text-gray-700 dark:text-gray-300">We might send you information about special promotions or offers. We might also tell you about new features or products. These might be our own offers or products, or third-party offers or products we think you might find interesting. Or, for example, if you buy tickets from us we'll enroll you in our newsletter.   </p>
+
+                                <h4 className="mt-6 text-black font-semibold dark:text-gray-300">We use information to send you transactional communications.   </h4>
+                                <p className="mt-6 text-gray-700 dark:text-gray-300">We might send you emails or SMS about your account or a ticket purchase. 
+
+We use information as otherwise permitted by law. </p>
+
+                    <h3 className="mt-6 text-black font-semibold dark:text-gray-300">Sharing of information with third-parties</h3>
+                                <h4 className="mt-6 text-black font-semibold dark:text-gray-300">We will share information with third parties who perform services on our behalf.   </h4>
+                                <p className="mt-6 text-gray-700 dark:text-gray-300">We share information with vendors who help us manage our online registration process or payment processors or transactional message processors. Some vendors may be located outside of India. </p>
+
+                                <h4 className="mt-6 text-black font-semibold dark:text-gray-300">We will share information with the event organizers.  </h4>
+                                <p className="mt-6 text-gray-700 dark:text-gray-300">We share your information with event organizers and other parties responsible for fulfilling the purchase obligation. The event organizers and other parties may use the information we give them as described in their privacy policies. </p>
+
+                                <h4 className="mt-6 text-black font-semibold dark:text-gray-300">We will share information with our business partners.   </h4>
+                                <p className="mt-6 text-gray-700 dark:text-gray-300">This includes a third party who provide or sponsor an event, or who operates a venue where we hold events. Our partners use the information we give them as described in their privacy policies. </p>
+
+                                <h4 className="mt-6 text-black font-semibold dark:text-gray-300">We may share information if we think we have to in order to comply with the law or to protect ourselves.  </h4>
+                                <p className="mt-6 text-gray-700 dark:text-gray-300">We will share information to respond to a court order or subpoena. We may also share it if a government agency or investigatory body requests. Or, we might also share information when we are investigating potential fraud.  </p>
+
+                                <h4 className="mt-6 text-black font-semibold dark:text-gray-300">We may share information with any successor to all or part of our business.    </h4>
+                                <p className="mt-6 text-gray-700 dark:text-gray-300">For example, if part of our business is sold we may give our customer list as part of that transaction.   </p>
+
+                                <h4 className="mt-6 text-black font-semibold dark:text-gray-300">We may share your information for reasons not described in this policy.   </h4>
+                                <p className="mt-6 text-gray-700 dark:text-gray-300">We will tell you before we do this.  </p>
+
+                                <h4 className="mt-6 text-black font-semibold dark:text-gray-300">Email Opt-Out  </h4>
+                                <p className="mt-6 text-gray-700 dark:text-gray-300">You can opt out of receiving our marketing emails. To stop receiving our promotional emails, please email unsubscribe me on shopntrolly@gmail.com. It may take about ten days to process your request. Even if you opt out of getting marketing messages, we will still be sending you transactional messages through email and SMS about your purchases.</p>
+
+                                <h4 className="mt-6 text-black font-semibold dark:text-gray-300">Third party sites </h4>
+                                <p className="mt-6 text-gray-700 dark:text-gray-300">If you click on one of the links to third party websites, you may be taken to websites we do not control. This policy does not apply to the privacy practices of those websites. Read the privacy policy of other websites carefully. We are not responsible for these third party sites.  </p>
+
+                                <h4 className="mt-6 text-black font-semibold dark:text-gray-300">Updates to this policy  </h4>
+                                <p className="mt-6 text-gray-700 dark:text-gray-300">This Privacy Policy was last updated on 01-04-2024. From time to time we may change our privacy practices. We will notify you of any material changes to this policy as required by law. We will also post an updated copy on our website. Please check our site periodically for updates. This Privacy Policy was last updated on 01-04-2024. From time to time we may change our privacy practices. We will notify you of any material changes to this policy as required by law. We will also post an updated copy on our website. Please check our site periodically for updates.  </p>
+
+                                <h4 className="mt-6 text-black font-semibold dark:text-gray-300">Jurisdiction Jurisdiction   </h4>
+                                <p className="mt-6 text-gray-700 dark:text-gray-300">If you choose to visit the website, your visit and any dispute over privacy is subject to this Policy and the website's terms of use. In addition to the foregoing, any disputes arising under this Policy shall be governed by the laws of India.  </p>
                             </div>
 
                         </div>
-                        {/* <div className="overflow-hidden lg:col-span-3 border bg-white dark:bg-[--card-dark-bg] rounded-[--card-border-radius] border-[--ui-light-border-color] dark:border-[--ui-dark-border-color]">
-                          
-                                    <Image 
-                                        src={Image1} 
-                                        alt="image"
-                                        className="w-full h-full object-cover object-center"
-                                        width={300}
-                                        height={200}
-                                    />
-                          
-                        </div> */}
+                       
                     </div>
                 </div>
             </div>
