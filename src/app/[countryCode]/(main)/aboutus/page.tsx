@@ -5,9 +5,9 @@ import Image from "next/image"
 export default async function Aboutus() {
   return (
     <section>
-      <div className="py-36">
+      <div className="py-10 md:py-36">
         <div className="mx-auto px-6 max-w-6xl text-gray-500">
-          <div className="flex justify-between items-center gap-12">
+          <div className="flex flex-wrap lg:flex-nowrap justify-between items-center gap-12">
             <div className="flex-grow">
               <div className="md:pr-6 lg:pr-0 text-gray-700 dark:text-gray-300 space-y-4">
                 <h2 className="text-4xl text-gray-950 dark:text-white font-semibold">
