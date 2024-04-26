@@ -10,16 +10,16 @@ import HotSales from "@modules/home/components/hotsales"
 import Testimonials from "@modules/home/components/testimonials"
 
 export const metadata: Metadata = {
-  title: "Medusa Next.js Starter Template",
+  title: "Shop N Trolly",
   description:
-    "A performant frontend ecommerce starter template with Next.js 14 and Medusa.",
+    "SHOPNTROLLY - Easy Shopping.",
 }
 
 const getCollectionsWithProducts = cache(
   async (
     countryCode: string
   ): Promise<ProductCollectionWithPreviews[] | null> => {
-    const { collections } = await getCollectionsList(0, 3)
+    const { collections } = await getCollectionsList(0, 9)
 
     if (!collections) {
       return null
@@ -73,10 +73,8 @@ export default async function Home({
       <Hero />
       <div className="py-12">
         <ul className="flex flex-col gap-x-16">
-          <FeaturedProducts collections={collections} region={region} />
-        
+          {collections && <FeaturedProducts collections={collections} region={region} />}
         </ul>
-        
       </div>
       <HotSales />
       <Testimonials />
