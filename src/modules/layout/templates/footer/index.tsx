@@ -110,7 +110,7 @@ export default async function Footer() {
             )}
             <div className="flex flex-col gap-y-2">
               <span className="text-lg font-medium txt-ui-fg-base">
-                Hot sales
+                Legal
               </span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 <li>
@@ -125,7 +125,7 @@ export default async function Footer() {
                 </li>
                 <li>
                   <a
-                    href="privacy-policy"
+                    href="/privacy-policy"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base text-base"
@@ -135,12 +135,12 @@ export default async function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://github.com/medusajs/nextjs-starter-medusa"
+                    href="/terms-of-service"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base text-base"
                   >
-                    Source code
+                    Terms Of Service
                   </a>
                 </li>
               </ul>
