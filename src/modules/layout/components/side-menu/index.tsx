@@ -72,7 +72,7 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
                       })}
                     </ul>
                     <div className="flex flex-col gap-y-6">
-                      <div
+                      {/* <div
                         className="flex justify-between"
                         onMouseEnter={toggleState.open}
                         onMouseLeave={toggleState.close}
@@ -89,7 +89,7 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
                             toggleState.state ? "-rotate-90" : ""
                           )}
                         />
-                      </div>
+                      </div> */}
                       <Text className="flex justify-between txt-compact-small">
                         © {new Date().getFullYear()} Shop N Trolly. All rights
                         reserved.
