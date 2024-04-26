@@ -45,7 +45,7 @@ export default async function ProductPreview({
         />
         <div className="flex flex-col txt-compact-medium mt-4 justify-between">
           <Text
-            className="text-black text-base md:text-lg"
+            className="text-black  text-base md:text-lg"
             data-testid="product-title"
           >
             {productPreview.title}
