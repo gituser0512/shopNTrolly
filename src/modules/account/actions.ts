@@ -19,6 +19,7 @@ import {
   StorePostCustomersCustomerReq,
   StorePostCustomersReq,
 } from "@medusajs/medusa"
+import axios from "axios"
 
 export async function signUp(_currentState: unknown, formData: FormData) {
   const customer = {
@@ -29,13 +30,33 @@ export async function signUp(_currentState: unknown, formData: FormData) {
     phone: formData.get("phone"),
   } as StorePostCustomersReq
 
+  const baseUrl = 'https://api.brevo.com/v3/contacts';
+    const headers = {
+      accept: 'application/json',
+      'content-type': 'application/json',
+      'api-key': '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'
+    };
+    const data = {
+      email: customer.email,
+      ext_id: customer.email,
+      attributes: { FNAME: customer.first_name, LNAME: customer.last_name },
+      emailBlacklisted: false,
+      smsBlacklisted: false,
+      listIds: [5],
+      updateEnabled: false,
+      smtpBlacklistSender: ['user@example.com']
+    };
+  
   try {
-    await createCustomer(customer)
+    await createCustomer(customer)  
+    
     await getToken({ email: customer.email, password: customer.password }).then(
       () => {
         revalidateTag("customer")
       }
     )
+    await axios.post(baseUrl, data, { headers })
+    .then(res => console.log(res.data))
   } catch (error: any) {
     return error.toString()
   }
