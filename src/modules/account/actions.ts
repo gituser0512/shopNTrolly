@@ -39,7 +39,7 @@ export async function signUp(_currentState: unknown, formData: FormData) {
   const data = {
     email: customer.email,
     ext_id: customer.email,
-    attributes: { FNAME: customer.first_name, LNAME: customer.last_name },
+    attributes: { FNAME: customer.first_name, LNAME: customer.last_name, PHONE: customer.phone, CITY: formData.get("city"), PINCODE: formData.get("pincode") },
     emailBlacklisted: false,
     smsBlacklisted: false,
     listIds: [5],
@@ -56,7 +56,6 @@ export async function signUp(_currentState: unknown, formData: FormData) {
         revalidateTag("customer")
       }
     )
-    console.log("brevooooooooooooooooooooooooooo")
     await axios.post(baseUrl, data, { headers })
     .then(res => console.log(res.data))
     .catch(err => console.log(err, "error"))
