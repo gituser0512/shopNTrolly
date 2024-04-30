@@ -16,45 +16,47 @@ export const metadata: Metadata = {
 }
 
 const getCollectionsWithProducts = cache(
-  async (
-    countryCode: string
-  ): Promise<ProductCollectionWithPreviews[] | null> => {
-    const { collections } = await getCollectionsList(0, 9)
-
+  async (countryCode: string): Promise<ProductCollectionWithPreviews[] | null> => {
+    const { collections } = await getCollectionsList(0, 9);
     if (!collections) {
-      return null
+      return null;
     }
 
-    const collectionIds = collections.map((collection) => collection.id)
+    const sortedCollections = collections.sort((a, b) => {
+      const aCollectionId = parseInt(a.metadata.collection_id as string, 10);
+      const bCollectionId = parseInt(b.metadata.collection_id as string, 10);
+
+      return aCollectionId - bCollectionId;
+    });
+
+    const collectionIds = sortedCollections.map((collection) => collection.id);
 
     await Promise.all(
       collectionIds.map((id) =>
         getProductsList({
-          queryParams: { collection_id: [id] },
+          queryParams: { collection_id: [id.toString()] }, // Cast id to string
           countryCode,
         })
       )
     ).then((responses) =>
       responses.forEach(({ response, queryParams }) => {
-        let collection
-
-        if (collections) {
-          collection = collections.find(
-            (collection) => collection.id === queryParams?.collection_id?.[0]
-          )
+        let collection;
+        if (sortedCollections) {
+          collection = sortedCollections.find(
+            (collection) =>
+              collection.id === (queryParams?.collection_id as string[])?.join('') // Assert collection_id as string[]
+          );
         }
-
         if (!collection) {
-          return
+          return;
         }
-
-        collection.products = response.products as unknown as Product[]
+        collection.products = response.products as unknown as Product[];
       })
-    )
+    );
 
-    return collections as unknown as ProductCollectionWithPreviews[]
+    return sortedCollections as unknown as ProductCollectionWithPreviews[];
   }
-)
+);
 
 export default async function Home({
   params: { countryCode },

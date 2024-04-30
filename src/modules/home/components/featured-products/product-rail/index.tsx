@@ -14,7 +14,6 @@ export default function ProductRail({
 }) {
   const { products } = collection
 
-  console.log(collection, "collection")
 
   if (!products) {
     return null
