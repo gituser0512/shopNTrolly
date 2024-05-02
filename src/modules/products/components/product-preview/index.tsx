@@ -32,6 +32,9 @@ export default async function ProductPreview({
     region,
   })
 
+  const outOfStock = pricedProduct.variants.map(i => i.inventory_quantity).filter((item ) => item !== 0)
+
+
   return (
     <LocalizedClientLink
       href={`/products/${productPreview.handle}`}
@@ -49,6 +52,16 @@ export default async function ProductPreview({
             data-testid="product-title"
           >
             {productPreview.title}
+          </Text>
+          <Text
+            className={
+              `text-base md:text-lg ${
+                outOfStock.length === 0 ? 'text-red-500' : 'text-green-500'
+              }`
+            }
+            data-testid="product-title"
+          >
+            {outOfStock.length === 0 ?  'Out of stock' : 'In stock' }
           </Text>
           <div className="flex items-center gap-x-2">
             {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
