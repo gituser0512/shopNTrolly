@@ -26,12 +26,12 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
           {product.title}
         </Heading>
 
-        <Text
-          className="text-medium text-ui-fg-subtle"
+        <p
+          className="text-ui-fg-subtle prose-sm whitespace-break-spaces"
           data-testid="product-description"
         >
           {product.description}
-        </Text>
+        </p>
       </div>
     </div>
   )
