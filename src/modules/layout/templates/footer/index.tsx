@@ -5,6 +5,7 @@ import { getCategoriesList, getCollectionsList } from "@lib/data"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
 import Logo from "../../../../../public/favicon_io/icon-touch.png"
+import Link from "next/link"
 
 export default async function Footer() {
   const { collections } = await getCollectionsList(0, 6)
@@ -109,49 +110,47 @@ export default async function Footer() {
               </div>
             )}
             <div className="flex flex-col gap-y-2">
-              <span className="text-lg font-medium txt-ui-fg-base">
-                Legal
-              </span>
+              <span className="text-lg font-medium txt-ui-fg-base">Legal</span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 <li>
-                  <a
+                  <Link
                     href="/aboutus"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base text-base"
                   >
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/privacy-policy"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base text-base"
                   >
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/terms-of-service"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base text-base"
                   >
                     Terms Of Service
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/contact-us"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base text-base"
                   >
-                   Contact Us
-                  </a>
+                    Contact Us
+                  </Link>
                 </li>
               </ul>
             </div>
