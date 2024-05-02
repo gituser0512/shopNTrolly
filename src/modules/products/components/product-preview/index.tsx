@@ -1,4 +1,4 @@
-import { Text } from "@medusajs/ui"
+import { Badge, Text } from "@medusajs/ui"
 
 import { ProductPreviewType } from "types/global"
 
@@ -32,20 +32,29 @@ export default async function ProductPreview({
     region,
   })
 
-  const outOfStock = pricedProduct.variants.map(i => i.inventory_quantity).filter((item ) => item !== 0)
-
+  const outOfStock = pricedProduct.variants
+    .map((i) => i.inventory_quantity)
+    .filter((item) => item !== 0)
 
   return (
     <LocalizedClientLink
       href={`/products/${productPreview.handle}`}
       className="group"
     >
-      <div data-testid="product-wrapper">
+      <div data-testid="product-wrapper" className="relative">
         <Thumbnail
           thumbnail={productPreview.thumbnail}
           size="square"
           isFeatured={isFeatured}
         />
+        {outOfStock.length === 0 && (
+          <Badge
+            className={`text-sm text-red-500 absolute left-2 top-2 z-10`}
+            data-testid="product-title"
+          >
+            Out of stock
+          </Badge>
+        )}
         <div className="flex flex-col txt-compact-medium mt-4 justify-between">
           <Text
             className="text-black  text-base md:text-lg"
@@ -53,16 +62,7 @@ export default async function ProductPreview({
           >
             {productPreview.title}
           </Text>
-          <Text
-            className={
-              `text-base md:text-lg ${
-                outOfStock.length === 0 ? 'text-red-500' : 'text-green-500'
-              }`
-            }
-            data-testid="product-title"
-          >
-            {outOfStock.length === 0 ?  'Out of stock' : 'In stock' }
-          </Text>
+
           <div className="flex items-center gap-x-2">
             {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
           </div>
