@@ -11,25 +11,26 @@ import Testimonials from "@modules/home/components/testimonials"
 
 export const metadata: Metadata = {
   title: "Shop N Trolly",
-  description:
-    "SHOPNTROLLY - Easy Shopping.",
+  description: "SHOPNTROLLY - Easy Shopping.",
 }
 
 const getCollectionsWithProducts = cache(
-  async (countryCode: string): Promise<ProductCollectionWithPreviews[] | null> => {
-    const { collections } = await getCollectionsList(0, 9);
+  async (
+    countryCode: string
+  ): Promise<ProductCollectionWithPreviews[] | null> => {
+    const { collections } = await getCollectionsList(0, 9)
     if (!collections) {
-      return null;
+      return null
     }
 
     const sortedCollections = collections.sort((a, b) => {
-      const aCollectionId = parseInt(a.metadata.collection_id as string, 10);
-      const bCollectionId = parseInt(b.metadata.collection_id as string, 10);
+      const aCollectionId = parseInt(a.metadata.collection_id as string, 10)
+      const bCollectionId = parseInt(b.metadata.collection_id as string, 10)
 
-      return aCollectionId - bCollectionId;
-    });
+      return aCollectionId - bCollectionId
+    })
 
-    const collectionIds = sortedCollections.map((collection) => collection.id);
+    const collectionIds = sortedCollections.map((collection) => collection.id)
 
     await Promise.all(
       collectionIds.map((id) =>
@@ -40,23 +41,24 @@ const getCollectionsWithProducts = cache(
       )
     ).then((responses) =>
       responses.forEach(({ response, queryParams }) => {
-        let collection;
+        let collection
         if (sortedCollections) {
           collection = sortedCollections.find(
             (collection) =>
-              collection.id === (queryParams?.collection_id as string[])?.join('') // Assert collection_id as string[]
-          );
+              collection.id ===
+              (queryParams?.collection_id as string[])?.join("") // Assert collection_id as string[]
+          )
         }
         if (!collection) {
-          return;
+          return
         }
-        collection.products = response.products as unknown as Product[];
+        collection.products = response.products as unknown as Product[]
       })
-    );
+    )
 
-    return sortedCollections as unknown as ProductCollectionWithPreviews[];
+    return sortedCollections as unknown as ProductCollectionWithPreviews[]
   }
-);
+)
 
 export default async function Home({
   params: { countryCode },
@@ -73,9 +75,11 @@ export default async function Home({
   return (
     <>
       <Hero />
-      <div className="py-12">
+      <div className="">
         <ul className="flex flex-col gap-x-16">
-          {collections && <FeaturedProducts collections={collections} region={region} />}
+          {collections && (
+            <FeaturedProducts collections={collections} region={region} />
+          )}
         </ul>
       </div>
       <HotSales />

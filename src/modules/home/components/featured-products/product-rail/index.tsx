@@ -14,15 +14,16 @@ export default function ProductRail({
 }) {
   const { products } = collection
 
-
   if (!products) {
     return null
   }
 
   const backgroundColorMap: { [key: string]: string } = {
-    "Baby Products": "bg-rose-100",
+    "Baby Products": "bg-[#ffede9]",
     "Home Essentials": "bg-slate-100",
-    Stationary: "bg-zinc-100",
+    Stationary: "bg-[#d4cafd]",
+    "Smart Gadgets": "bg-[#e6fff2]",
+    Toys: "bg-[#b8fb96]",
   }
 
   const defaultBackgroundColor = "#f5f5f5"
