@@ -176,7 +176,7 @@ const Payment = ({
 
             <Button
               size="large"
-              className="mt-6"
+              className="mt-6 bg-[#ffc600] hover:bg-[#ffc600]/40 text-black"
               onClick={handleSubmit}
               isLoading={isLoading}
               disabled={(isStripe && !cardComplete) || !cart.payment_session}

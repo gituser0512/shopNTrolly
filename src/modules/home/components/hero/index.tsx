@@ -1,6 +1,6 @@
 import UnderlineLink from "@modules/common/components/underline-link"
 import Image from "next/image"
-import HeroImg from "../../../../../public/hero.jpg"
+import HeroImg from "../../../../../public/heroImage.jpg"
 
 const Hero = () => {
   return (

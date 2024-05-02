@@ -130,6 +130,7 @@ const StripePaymentButton = ({
         size="large"
         isLoading={submitting}
         data-testid={dataTestId}
+        className="bg-[#ffc600] hover:bg-[#ffc600]/40 text-black"
       >
         Place order
       </Button>
@@ -225,6 +226,7 @@ const ManualTestPaymentButton = ({ notReady }: { notReady: boolean }) => {
         onClick={handlePayment}
         size="large"
         data-testid="submit-order-button"
+        className="bg-[#ffc600] hover:bg-[#ffc600]/40 text-black"
       >
         Place order
       </Button>

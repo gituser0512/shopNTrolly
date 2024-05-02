@@ -17,7 +17,7 @@ export default function Component() {
             </p>
           </div>
           <div className="space-y-4">
-            <form className="grid gap-4">
+            <form className="grid gap-4" action="https://formsubmit.co/hello@shopntrolly.com" method="POST">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label
@@ -29,6 +29,7 @@ export default function Component() {
                   <Input
                     className="bg-white dark:bg-gray-800 dark:text-gray-300 dark:placeholder-gray-500"
                     id="first-name"
+                    name="first_name"
                     placeholder="Enter your first name"
                   />
                 </div>
@@ -43,6 +44,7 @@ export default function Component() {
                     className="bg-white dark:bg-gray-800 dark:text-gray-300 dark:placeholder-gray-500"
                     id="last-name"
                     placeholder="Enter your last name"
+                    name="last_name"
                   />
                 </div>
               </div>
@@ -56,8 +58,23 @@ export default function Component() {
                 <Input
                   className="bg-white dark:bg-gray-800 dark:text-gray-300 dark:placeholder-gray-500"
                   id="email"
+                  name="email"
                   placeholder="Enter your email"
                   type="email"
+                />
+              </div>
+              <div className="space-y-2">
+                <Label
+                  className="text-gray-700 text-base font-medium dark:text-gray-300"
+                  htmlFor="phone"
+                >
+                  Phone number
+                </Label>
+                <Input
+                  className="bg-white dark:bg-gray-800 dark:text-gray-300 dark:placeholder-gray-500"
+                  id="phone"
+                  name="phone"
+                  placeholder="Enter your phone"
                 />
               </div>
               <div className="space-y-2">
@@ -70,6 +87,7 @@ export default function Component() {
                 <Textarea
                   className="min-h-[100px] bg-white dark:bg-gray-800 dark:text-gray-300 dark:placeholder-gray-500"
                   id="message"
+                  name="message"
                   placeholder="Enter your message"
                 />
               </div>
