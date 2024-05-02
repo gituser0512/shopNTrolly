@@ -96,7 +96,7 @@ export default function Component() {
                 size="large"
                 className="bg-[#ffc600] hover:bg-[#ffc600]/40 text-black dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-200 w-full"
               >
-                Send message
+                Send Message
               </Button>
             </form>
           </div>
