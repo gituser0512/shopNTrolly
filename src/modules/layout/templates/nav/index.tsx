@@ -20,8 +20,8 @@ export default async function Nav() {
             <div className="h-full">
               <SideMenu regions={regions} />
             </div>
-            <Badge color="orange" className="hidden sm:block">
-              🚛 <span className="font-semibold">Shipping</span> to Pune Only!
+            <Badge color="orange" className="hidden sm:block font-workSans">
+              🚛 <span className="font-semibold">Shipping to Pune Only!</span>
             </Badge>
           </div>
 
@@ -30,15 +30,16 @@ export default async function Nav() {
               <Image
                 src={logo}
                 alt="logo"
-                width={62}
-                height={62}
+                width={50}
+                height={50}
                 quality={100}
+                className="aspect-square h-fit w-fit"
                 priority
               />
             </Link>
             <LocalizedClientLink
               href="/"
-              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase hidden md:block"
+              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase hidden md:block font-workSans"
               data-testid="nav-store-link"
             >
               Shop N Trolly

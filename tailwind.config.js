@@ -59,16 +59,16 @@ module.exports = {
         "3xl": "2rem",
       },
       fontFamily: {
-        // sans: [
-        //   "Work Sans",
-        //   "-apple-system",
-        //   "BlinkMacSystemFont",
-        //   "Segoe UI",
-        //   "Roboto",
-        //   "Helvetica Neue",
-        //   "Ubuntu",
-        //   "sans-serif",
-        // ],
+        sans: [
+          "Work Sans",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Ubuntu",
+          "sans-serif",
+        ],
         workSans: ["Work Sans", "sans-serif"],
       },
       keyframes: {
