@@ -46,6 +46,7 @@ export default async function ProductPreview({
           thumbnail={productPreview.thumbnail}
           size="square"
           isFeatured={isFeatured}
+          className="max-w-xs transition duration-300 ease-in-out hover:scale-110"
         />
         {outOfStock.length === 0 && (
           <Badge

@@ -47,7 +47,7 @@ const Register = ({ setCurrentView }: Props) => {
           <Input label="City" name="city" required type="text" autoComplete="city" data-testid="city-input" />
           <Input label="Pincode" name="pincode" required type="number" autoComplete="pincode" data-testid="pincode-input" />
           </div>
-          <Input label="Phone" name="phone" required type="tel" autoComplete="tel" data-testid="phone-input" />
+          <Input label="Phone" name="phone" required type="tel" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" autoComplete="tel" data-testid="phone-input" />
   
           <Input
             label="Email"
@@ -92,7 +92,7 @@ const Register = ({ setCurrentView }: Props) => {
         Already a member?{" "}
         <button
           onClick={() => setCurrentView(LOGIN_VIEW.SIGN_IN)}
-          className="underline"
+          className="text-large-regular border-b border-current gap-x-4 py-2 transition-all duration-300 group hover:pl-4 hover:pr-1"
         >
           Sign in
         </button>

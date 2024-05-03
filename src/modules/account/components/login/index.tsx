@@ -54,7 +54,7 @@ const Login = ({ setCurrentView }: Props) => {
         Not a member?{" "}
         <button
           onClick={() => setCurrentView(LOGIN_VIEW.REGISTER)}
-          className="underline"
+          className=" text-large-regular border-b border-current gap-x-4 py-2 transition-all duration-300 group hover:pl-4 hover:pr-1"
           data-testid="register-button"
         >
           Join us
