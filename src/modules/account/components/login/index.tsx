@@ -50,16 +50,15 @@ const Login = ({ setCurrentView }: Props) => {
           Sign in
         </SubmitButton>
       </form>
-      <span className="text-center text-ui-fg-base text-small-regular mt-6">
+      <span className="text-center text-base md:text-xl mt-6">
         Not a member?{" "}
         <button
           onClick={() => setCurrentView(LOGIN_VIEW.REGISTER)}
-          className=" text-large-regular border-b border-current gap-x-4 py-2 transition-all duration-300 group hover:pl-4 hover:pr-1"
+          className=" text-base md:text-xl border-b border-current transition-all duration-300 group hover:scale-110"
           data-testid="register-button"
         >
-          Join us
+          Join us.
         </button>
-        .
       </span>
     </div>
   )
