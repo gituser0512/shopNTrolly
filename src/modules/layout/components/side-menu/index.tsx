@@ -5,9 +5,11 @@ import { ArrowRightMini, XMark } from "@medusajs/icons"
 import { Region } from "@medusajs/medusa"
 import { Badge, Text, clx, useToggleState } from "@medusajs/ui"
 import { Fragment } from "react"
+import logo from "../../../../../public/icon.png"
 
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CountrySelect from "../country-select"
+import Image from "next/image"
 
 const SideMenuItems = {
   Home: "/",
@@ -49,7 +51,18 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
                     data-testid="nav-menu-popup"
                     className="flex flex-col h-full bg-[rgba(3,7,18,0.5)] rounded-rounded justify-between p-6"
                   >
-                    <div className="flex justify-end" id="xmark">
+                    <div
+                      className="flex justify-between items-start"
+                      id="xmark"
+                    >
+                      <Image
+                        src={logo}
+                        alt="logo"
+                        width={60}
+                        height={60}
+                        quality={100}
+                        className="aspect-square"
+                      />
                       <button data-testid="close-menu-button" onClick={close}>
                         <XMark />
                       </button>
