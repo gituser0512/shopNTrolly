@@ -22,10 +22,12 @@ export default async function StorePage({ searchParams, params }: Params) {
   const { sortBy, page } = searchParams
 
   return (
-    <StoreTemplate
-      sortBy={sortBy}
-      page={page}
-      countryCode={params.countryCode}
-    />
+    <div className="bg-[#d4cafd]/60">
+      <StoreTemplate
+        sortBy={sortBy}
+        page={page}
+        countryCode={params.countryCode}
+      />
+    </div>
   )
 }

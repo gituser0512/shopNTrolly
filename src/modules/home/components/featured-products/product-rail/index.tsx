@@ -1,3 +1,4 @@
+import { backgroundColorMap } from "@lib/data/background-colors"
 import { Region } from "@medusajs/medusa"
 import { Text } from "@medusajs/ui"
 
@@ -16,14 +17,6 @@ export default function ProductRail({
 
   if (!products) {
     return null
-  }
-
-  const backgroundColorMap: { [key: string]: string } = {
-    "Baby Products": "bg-[#ffede9]",
-    "Home Essentials": "bg-slate-100",
-    Stationary: "bg-[#d4cafd]",
-    "Smart Gadgets": "bg-[#e6fff2]",
-    Toys: "bg-[#b8fb96]",
   }
 
   const defaultBackgroundColor = "#f5f5f5"

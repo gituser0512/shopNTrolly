@@ -10,6 +10,7 @@ import {
 } from "@lib/data"
 import { Region } from "@medusajs/medusa"
 import ProductTemplate from "@modules/products/templates"
+import { backgroundColorMap } from "@lib/data/background-colors"
 
 type Props = {
   params: { countryCode: string; handle: string }
@@ -96,11 +97,17 @@ export default async function ProductPage({ params }: Props) {
     notFound()
   }
 
+  const backgroundColor =
+    backgroundColorMap[pricedProduct?.collection?.title.toString()!] ||
+    "bg-white"
+
   return (
-    <ProductTemplate
-      product={pricedProduct}
-      region={region}
-      countryCode={params.countryCode}
-    />
+    <div className={`${backgroundColor}`}>
+      <ProductTemplate
+        product={pricedProduct}
+        region={region}
+        countryCode={params.countryCode}
+      />
+    </div>
   )
 }
