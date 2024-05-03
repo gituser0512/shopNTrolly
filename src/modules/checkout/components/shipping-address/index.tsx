@@ -151,7 +151,11 @@ const ShippingAddress = ({
           label="State / Province"
           name="shipping_address.province"
           autoComplete="address-level1"
-          value={formData["shipping_address.province"]}
+          required
+          type="text"
+          disabled
+          // value={formData["shipping_address.province"]}
+          value="Maharashtra"
           onChange={handleChange}
           data-testid="shipping-province-input"
         />
@@ -181,6 +185,10 @@ const ShippingAddress = ({
           label="Phone"
           name="shipping_address.phone"
           autoComplete="tel"
+          type="tel"
+          required
+          minLength={10}
+          maxLength={10}
           value={formData["shipping_address.phone"]}
           onChange={handleChange}
           data-testid="shipping-phone-input"
