@@ -17,7 +17,10 @@ const Register = ({ setCurrentView }: Props) => {
   const [message, formAction] = useFormState(signUp, null)
 
   return (
-    <div className="max-w-sm flex flex-col items-center" data-testid="register-page">
+    <div
+      className="max-w-sm flex flex-col items-center"
+      data-testid="register-page"
+    >
       <h1 className="text-large-semi uppercase mb-6">
         Become a Shop N Trolly Member
       </h1>
@@ -28,27 +31,49 @@ const Register = ({ setCurrentView }: Props) => {
       <form className="w-full flex flex-col" action={formAction}>
         <div className="flex flex-col w-full gap-y-2">
           <div className="flex gap-2 items-center">
-          <Input
-            label="First name"
-            name="first_name"
-            required
-            autoComplete="given-name"
-            data-testid="first-name-input"
-          />
-          <Input
-            label="Last name"
-            name="last_name"
-            required
-            autoComplete="family-name"
-            data-testid="last-name-input"
-          />
+            <Input
+              label="First name"
+              name="first_name"
+              required
+              autoComplete="given-name"
+              data-testid="first-name-input"
+            />
+            <Input
+              label="Last name"
+              name="last_name"
+              required
+              autoComplete="family-name"
+              data-testid="last-name-input"
+            />
           </div>
           <div className="flex gap-4 items-center">
-          <Input label="City" name="city" required type="text" autoComplete="city" data-testid="city-input" />
-          <Input label="Pincode" name="pincode" required type="number" autoComplete="pincode" data-testid="pincode-input" />
+            <Input
+              label="City"
+              name="city"
+              required
+              type="text"
+              autoComplete="city"
+              data-testid="city-input"
+            />
+            <Input
+              label="Pincode"
+              name="pincode"
+              required
+              type="number"
+              autoComplete="pincode"
+              data-testid="pincode-input"
+            />
           </div>
-          <Input label="Phone" name="phone" required type="tel" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" autoComplete="tel" data-testid="phone-input" />
-  
+          <Input
+            label="Phone"
+            name="phone"
+            required
+            type="tel"
+            pattern="[0-9]{3} [0-9]{3} [0-9]{4}"
+            autoComplete="tel"
+            data-testid="phone-input"
+          />
+
           <Input
             label="Email"
             name="email"
@@ -57,8 +82,7 @@ const Register = ({ setCurrentView }: Props) => {
             autoComplete="email"
             data-testid="email-input"
           />
-          
-          
+
           <Input
             label="Password"
             name="password"
@@ -70,29 +94,25 @@ const Register = ({ setCurrentView }: Props) => {
         </div>
         <ErrorMessage error={message} data-testid="register-error" />
         <span className="text-center text-ui-fg-base text-small-regular mt-6">
-          By creating an account, you agree to Shop N Trolly&apos;s{" "}
-          <LocalizedClientLink
-            href="/privacy-policy"
-            className="underline"
-          >
+          By creating an account, you agree to Shop N Trolly&apos;s <br />
+          <LocalizedClientLink href="/privacy-policy" className="underline">
             Privacy Policy
           </LocalizedClientLink>{" "}
           and{" "}
-          <LocalizedClientLink
-            href="/terms-of-service"
-            className="underline"
-          >
+          <LocalizedClientLink href="/terms-of-service" className="underline">
             Terms of Use
           </LocalizedClientLink>
           .
         </span>
-        <SubmitButton className="w-full mt-6" data-testid="register-button">Join</SubmitButton>
+        <SubmitButton className="w-full mt-6" data-testid="register-button">
+          Join
+        </SubmitButton>
       </form>
-      <span className="text-center text-ui-fg-base text-small-regular mt-6">
+      <span className="text-center text-base md:text-xl mt-6">
         Already a member?{" "}
         <button
           onClick={() => setCurrentView(LOGIN_VIEW.SIGN_IN)}
-          className="text-large-regular border-b border-current gap-x-4 py-2 transition-all duration-300 group hover:pl-4 hover:pr-1"
+          className="text-base md:text-xl border-b border-current transition-all duration-300 group hover:scale-110"
         >
           Sign in
         </button>

@@ -8,6 +8,7 @@ import {
 } from "@lib/data"
 import CollectionTemplate from "@modules/collections/templates"
 import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
+import { backgroundColorMap } from "@lib/data/background-colors"
 
 type Props = {
   params: { handle: string; countryCode: string }
@@ -69,13 +70,15 @@ export default async function CollectionPage({ params, searchParams }: Props) {
   if (!collection) {
     notFound()
   }
-
+  const backgroundColor = backgroundColorMap[collection.title] || "bg-white"
   return (
-    <CollectionTemplate
-      collection={collection}
-      page={page}
-      sortBy={sortBy}
-      countryCode={params.countryCode}
-    />
+    <div className={`${backgroundColor}`}>
+      <CollectionTemplate
+        collection={collection}
+        page={page}
+        sortBy={sortBy}
+        countryCode={params.countryCode}
+      />
+    </div>
   )
 }

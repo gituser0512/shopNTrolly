@@ -61,7 +61,7 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
                         width={60}
                         height={60}
                         quality={100}
-                        className="aspect-square"
+                        className="aspect-square w-fit"
                       />
                       <button data-testid="close-menu-button" onClick={close}>
                         <XMark />
@@ -104,7 +104,7 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
                       </div> */}
                       <Badge
                         color="orange"
-                        className="w-fit text-base md:text-lg"
+                        className="w-fit text-sm md:text-lg"
                       >
                         🚛 <span className="font-semibold">Shipping</span> to
                         Pune Only!
