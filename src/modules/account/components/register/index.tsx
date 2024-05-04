@@ -68,8 +68,8 @@ const Register = ({ setCurrentView }: Props) => {
             label="Phone"
             name="phone"
             required
-            type="tel"
-            pattern="[0-9]{3} [0-9]{3} [0-9]{4}"
+            type="text"
+            // pattern="[0-9]{3} [0-9]{3} [0-9]{4}"
             autoComplete="tel"
             data-testid="phone-input"
           />
