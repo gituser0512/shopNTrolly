@@ -28,8 +28,7 @@ const ShippingAddress = ({
     "shipping_address.city": cart?.shipping_address?.city || "",
     "shipping_address.country_code":
       cart?.shipping_address?.country_code || countryCode || "",
-    "shipping_address.province":
-      cart?.shipping_address?.province || "Maharashtra",
+    "shipping_address.province": cart?.shipping_address?.province || "",
     email: cart?.email || "",
     "shipping_address.phone": cart?.shipping_address?.phone || "",
   })
@@ -58,8 +57,7 @@ const ShippingAddress = ({
       "shipping_address.city": cart?.shipping_address?.city || "",
       "shipping_address.country_code":
         cart?.shipping_address?.country_code || "",
-      "shipping_address.province":
-        cart?.shipping_address?.province || "Maharashtra",
+      "shipping_address.province": cart?.shipping_address?.province || "",
       email: cart?.email || "",
       "shipping_address.phone": cart?.shipping_address?.phone || "",
     })
@@ -156,8 +154,8 @@ const ShippingAddress = ({
           required
           type="text"
           disabled
-          // value={formData["shipping_address.province"]}
-          value="Maharashtra"
+          value={formData["shipping_address.province"]}
+          // value="Maharashtra"
           onChange={handleChange}
           data-testid="shipping-province-input"
         />
