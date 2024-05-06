@@ -2,12 +2,15 @@
 
 import { useFormState } from "react-dom"
 
-import Input from "@modules/common/components/input"
-import { LOGIN_VIEW } from "@modules/account/templates/login-template"
 import { signUp } from "@modules/account/actions"
+import { LOGIN_VIEW } from "@modules/account/templates/login-template"
 import ErrorMessage from "@modules/checkout/components/error-message"
 import { SubmitButton } from "@modules/checkout/components/submit-button"
+import Input from "@modules/common/components/input"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import Image from "next/image"
+import IndianFlag from "../../../../../public/india.svg"
+import { Label } from "@medusajs/ui"
 
 type Props = {
   setCurrentView: (view: LOGIN_VIEW) => void
@@ -64,16 +67,36 @@ const Register = ({ setCurrentView }: Props) => {
               data-testid="pincode-input"
             />
           </div>
-          <Input
-            label="Phone"
-            name="phone"
-            required
-            type="text"
-            // pattern="[0-9]{3} [0-9]{3} [0-9]{4}"
-            autoComplete="tel"
-            data-testid="phone-input"
-          />
-
+          <div className="flex gap-2 items-center">
+            <div className="flex gap-1 items-center w-fit">
+              <Image
+                src={IndianFlag}
+                width={40}
+                height={40}
+                alt="Indian Flag"
+                quality={100}
+                className="rounded-sm aspect-auto"
+              />
+              <Label htmlFor="phone" className="text-base">
+                {" "}
+                +91{" "}
+              </Label>
+            </div>
+            <div className="flex-grow">
+              <Input
+                label="Phone"
+                name="phone"
+                required
+                type="tel"
+                pattern="[0-9]{10}"
+                maxLength={10}
+                minLength={10}
+                autoComplete="tel"
+                data-testid="phone-input"
+                title="Please enter a valid 10-digit phone number"
+              />
+            </div>
+          </div>
           <Input
             label="Email"
             name="email"
