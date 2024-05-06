@@ -153,7 +153,6 @@ const ShippingAddress = ({
           autoComplete="address-level1"
           required
           type="text"
-          disabled
           value={formData["shipping_address.province"]}
           // value="Maharashtra"
           onChange={handleChange}
