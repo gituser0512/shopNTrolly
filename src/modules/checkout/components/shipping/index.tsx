@@ -64,6 +64,13 @@ const Shipping: React.FC<ShippingProps> = ({
     console.log(availableShippingMethods, "methods")
   }, [isOpen])
 
+  console.log(cart, "cart aslhdlajkhdlhalk")
+
+
+  const totalWeight = cart?.items.map(i => parseFloat(((i.quantity * i.variant.product.weight) / 500).toFixed(2)));
+
+  console.log(totalWeight, "weightakjajdaj")
+
   return (
     <div className="bg-white">
       <div className="flex flex-row items-center justify-between mb-6">
@@ -171,9 +178,9 @@ const Shipping: React.FC<ShippingProps> = ({
                   Method
                 </Text>
                 <Text className="txt-medium text-ui-fg-subtle">
-                  {cart.shipping_methods[0].shipping_option.name} (
+                  {cart.shipping_methods[0].shipping_option?.name} (
                   {formatAmount({
-                    amount: cart.shipping_methods[0].price,
+                    amount:cart.shipping_methods[0].price * totalWeight, 
                     region: cart.region,
                     includeTaxes: false,
                   })
