@@ -15,6 +15,9 @@ import { setShippingMethod } from "@modules/checkout/actions"
 import { useRouter, useSearchParams, usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
 
+// Opt out of caching for all data requests in the route segment
+export const dynamic = "force-dynamic"
+
 type ShippingProps = {
   cart: Omit<Cart, "refundable_amount" | "refunded_total">
   availableShippingMethods: PricedShippingOption[] | null
