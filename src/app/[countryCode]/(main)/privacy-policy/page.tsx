@@ -1,3 +1,5 @@
+import { Metadata } from "next"
+
 const privacyPolicy = [
   {
     id: 1,
@@ -115,6 +117,11 @@ const privacyPolicy = [
       "If you choose to visit the website, your visit and any dispute over privacy is subject to this Policy and the website's terms of use. In addition to the foregoing, any disputes arising under this Policy shall be governed by the laws of India.  ",
   },
 ]
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Shop N Trolly",
+  description: "SHOPNTROLLY - Easy Shopping.",
+}
 
 export default async function Aboutus() {
   return (

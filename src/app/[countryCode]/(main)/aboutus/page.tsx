@@ -2,6 +2,11 @@ import { Metadata } from "next"
 import Image1 from "../../../../../public/favicon_io/android-chrome-512x512.png"
 import Image from "next/image"
 
+export const metadata: Metadata = {
+  title: "About Us | Shop N Trolly",
+  description: "SHOPNTROLLY - Easy Shopping.",
+}
+
 export default async function Aboutus() {
   return (
     <section>

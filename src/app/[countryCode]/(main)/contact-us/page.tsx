@@ -1,6 +1,10 @@
 import { Button, Input, Label, Textarea } from "@medusajs/ui"
-import Image from "next/image"
-import Logo from "../../../../../public/icon.png"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Contact Us | Shop N Trolly",
+  description: "SHOPNTROLLY - Easy Shopping.",
+}
 
 export default function Component() {
   return (
@@ -17,7 +21,11 @@ export default function Component() {
             </p>
           </div>
           <div className="space-y-4">
-            <form className="grid gap-4" action="https://formsubmit.co/hello@shopntrolly.com" method="POST">
+            <form
+              className="grid gap-4"
+              action="https://formsubmit.co/hello@shopntrolly.com"
+              method="POST"
+            >
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label

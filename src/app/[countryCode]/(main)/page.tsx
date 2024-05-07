@@ -10,7 +10,7 @@ import HotSales from "@modules/home/components/hotsales"
 import Testimonials from "@modules/home/components/testimonials"
 
 export const metadata: Metadata = {
-  title: "Shop N Trolly",
+  title: "Home | Shop N Trolly",
   description: "SHOPNTROLLY - Easy Shopping.",
 }
 
