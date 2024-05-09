@@ -42,7 +42,7 @@ const Shipping: React.FC<ShippingProps> = ({
 
   const handleSubmit = () => {
     setIsLoading(true)
-    router.push(pathname + "?step=payment", { scroll: false })
+    router.push(pathname + "?step=review", { scroll: false })
   }
 
   const set = async (id: string) => {
@@ -66,13 +66,6 @@ const Shipping: React.FC<ShippingProps> = ({
     setError(null)
     console.log(availableShippingMethods, "methods")
   }, [isOpen])
-
-  console.log(cart, "cart aslhdlajkhdlhalk")
-
-
-  const totalWeight = cart?.items.map(i => parseFloat(((i.quantity * i.variant.product.weight) / 500).toFixed(2)));
-
-  console.log(totalWeight, "weightakjajdaj")
 
   return (
     <div className="bg-white">
@@ -169,7 +162,7 @@ const Shipping: React.FC<ShippingProps> = ({
             disabled={!cart.shipping_methods[0]}
             data-testid="submit-delivery-option-button"
           >
-            Continue to payment
+            Continue to Place Order Request
           </Button>
         </div>
       ) : (
@@ -183,7 +176,7 @@ const Shipping: React.FC<ShippingProps> = ({
                 <Text className="txt-medium text-ui-fg-subtle">
                   {cart.shipping_methods[0].shipping_option?.name} (
                   {formatAmount({
-                    amount:cart.shipping_methods[0].price * totalWeight, 
+                    amount: cart.shipping_methods[0].price,
                     region: cart.region,
                     includeTaxes: false,
                   })

@@ -16,9 +16,8 @@ const Review = ({
   const isOpen = searchParams.get("step") === "review"
 
   const previousStepsCompleted =
-    cart.shipping_address &&
-    cart.shipping_methods.length > 0 &&
-    cart.payment_session
+    cart.shipping_address && cart.shipping_methods.length > 0
+  // && cart.payment_session
 
   return (
     <div className="bg-white">
@@ -32,7 +31,7 @@ const Review = ({
             }
           )}
         >
-          Review
+          Place Order Request
         </Heading>
       </div>
       {isOpen && previousStepsCompleted && (
