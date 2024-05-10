@@ -38,7 +38,7 @@ export default async function Aboutus() {
                 <li className="flex gap-4 items-center p-2">
                   <svg
                     className="size-5"
-                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns="https://www.w3.org/2000/svg"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -57,7 +57,7 @@ export default async function Aboutus() {
                 <li className="flex gap-4 items-center p-2">
                   <svg
                     className="size-5"
-                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns="https://www.w3.org/2000/svg"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -78,7 +78,7 @@ export default async function Aboutus() {
                 <li className="flex gap-4 items-center p-2">
                   <svg
                     className="size-5"
-                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns="https://www.w3.org/2000/svg"
                     width="1em"
                     height="1em"
                     viewBox="0 0 14 14"
@@ -96,7 +96,7 @@ export default async function Aboutus() {
                 <li className="flex gap-4 items-center p-2">
                   <svg
                     className="size-5"
-                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns="https://www.w3.org/2000/svg"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"

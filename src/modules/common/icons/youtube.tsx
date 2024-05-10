@@ -5,7 +5,7 @@ import { IconProps } from "types/icon"
 const Youtube: React.FC<IconProps> = ({ ...attributes }) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns="https://www.w3.org/2000/svg"
       width={30}
       viewBox="5.368 13.434 53.9 37.855"
       id="youtube"

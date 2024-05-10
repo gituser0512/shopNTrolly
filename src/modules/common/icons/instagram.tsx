@@ -5,7 +5,7 @@ import { IconProps } from "types/icon"
 const Instagram: React.FC<IconProps> = ({ ...attributes }) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns="https://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       id="instagram"
       width={25}
