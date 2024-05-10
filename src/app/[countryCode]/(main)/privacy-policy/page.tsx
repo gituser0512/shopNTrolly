@@ -23,7 +23,7 @@ const privacyPolicy = [
     id: 4,
     title: "Information you post.",
     description:
-      "We collect information you post in a public space on our website or on a third-party social media site belonging to http://www.Shopntrolly.com",
+      "We collect information you post in a public space on our website or on a third-party social media site belonging to https://www.Shopntrolly.com",
   },
   {
     id: 5,
