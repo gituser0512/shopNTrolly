@@ -8,7 +8,7 @@ const transporter = nodemailer.createTransport({
   secure: true,
   auth: {
     user: 'hello@in.shoptrolly.com',
-    pass: 'zhRTsrav4YMS',
+    pass: 'shWelcome2024!',
   },
 });
 
