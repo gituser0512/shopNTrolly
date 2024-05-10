@@ -5,7 +5,7 @@ const privacyPolicy = [
     id: 1,
     title: "Information we collect",
     description:
-      "SHOPNTROLLY recognizes the importance of maintaining your privacy. We value your privacy and appreciate your trust in us. This Policy describes how we treat user information we collect on http://www.Shopntrolly.com and other offline sources. This Privacy Policy applies to current and former visitors to our website and to our online customers. By visiting and/or using our website, you agree to this Privacy Policy.",
+      "SHOPNTROLLY recognizes the importance of maintaining your privacy. We value your privacy and appreciate your trust in us. This Policy describes how we treat user information we collect on https://www.Shopntrolly.com and other offline sources. This Privacy Policy applies to current and former visitors to our website and to our online customers. By visiting and/or using our website, you agree to this Privacy Policy.",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const privacyPolicy = [
     id: 4,
     title: "Information you post.",
     description:
-      "We collect information you post in a public space on our website or on a third-party social media site belonging to http://www.Shopntrolly.com",
+      "We collect information you post in a public space on our website or on a third-party social media site belonging to https://www.Shopntrolly.com",
   },
   {
     id: 5,
