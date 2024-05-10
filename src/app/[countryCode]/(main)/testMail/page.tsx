@@ -3,19 +3,19 @@ import { render } from '@react-email/render';
 import nodemailer from 'nodemailer';
 
 const transporter = nodemailer.createTransport({
-  host: 'smtppro.zoho.com',
-  port: 587,
+  host: 'smtp.zoho.com',
+  port: 465,
   secure: false,
   auth: {
-    user: 'hello@in.shoptrolly.com',
-    pass: 'zhRTsrav4YMS',
+    user: 'chris@in.intelliconnectq.com',
+    pass: 'Jb8LQ3F7WsPH',
   },
 });
 
 const emailHtml = render(<Email url="https://example.com" />);
 
 const options = {
-  from: 'hello@in.shoptrolly.com',
+  from: 'chris@in.intelliconnectq.com',
   to: 'barryanil1@gmail.com',
   subject: 'hello world',
   html: emailHtml,
