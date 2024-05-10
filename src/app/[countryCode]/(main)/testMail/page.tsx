@@ -4,11 +4,11 @@ import nodemailer from 'nodemailer';
 
 const transporter = nodemailer.createTransport({
   host: 'smtppro.zoho.com',
-  port: 465,
-  secure: true,
+  port: 587,
+  secure: false,
   auth: {
     user: 'hello@in.shoptrolly.com',
-    pass: 'shWelcome2024!',
+    pass: 'zhRTsrav4YMS',
   },
 });
 
