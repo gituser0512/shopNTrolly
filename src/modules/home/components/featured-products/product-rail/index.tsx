@@ -19,11 +19,11 @@ export default function ProductRail({
   }
 
   const backgroundColorMap: { [key: string]: string } = {
-    "Baby Products": "bg-[#ffede9]",
+    "Baby Products": "bg-slate-100",
     "Home Essentials": "bg-slate-100",
-    "Stationary": "bg-[#d4cafd]",
-    "Smart Gadgets": "bg-[#e6fff2]",
-    "Toys": "bg-[#b8fb96]",
+    "Stationary": "bg-slate-100",
+    "Smart Gadgets": "bg-slate-100",
+    "Toys": "bg-slate-100",
   }
 
   const defaultBackgroundColor = "#f5f5f5"
