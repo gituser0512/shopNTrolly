@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description: "SHOPNTROLLY - Easy Shopping.",
 }
 
-export default async function ShippinPolicy() {
+export default async function ShippingPolicy() {
     return (
         <section>
             <div className="py-10 ">

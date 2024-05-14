@@ -170,7 +170,7 @@ export default async function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/shipping-policy"
+                    href="/in/shipping-policy"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base text-base"
