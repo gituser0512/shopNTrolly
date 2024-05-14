@@ -4,18 +4,20 @@ const textItems = [
   { text: "LIMITED TIME OFFER FASHION SALE YOU CAN'T RESIST" },
   { text: 'EASY SHIPPING' },
   { text: "NEW SEASON, NEW STYLES: FASHION SALE YOU CAN'T MISS" },
+  { text: "BRAND NEW:  PRODUCT FOR SALE" },
 ];
 
 const InfiniteScroll = () => {
+  const duplicatedItems = [...textItems, ...textItems]; 
   return (
     <div className="bg-yellow-200 scroller flex overflow-hidden" data-speed="fast">
       <ul className="tag-list flex animate-scroll whitespace-nowrap gap-8 py-2 items-center" role="list">
-        {textItems.map((item, index) => (
+        {duplicatedItems.map((item, index) => (
           <React.Fragment key={index}>
-            <li className="px-4 py-2 text-base flex items-center">
+            <li className="px-8 py-2 text-base flex items-center">
               {item.text}
             </li>
-            {index !== textItems.length - 1 && (
+            {index !== duplicatedItems.length - 1 && (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="21"
