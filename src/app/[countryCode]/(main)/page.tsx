@@ -8,6 +8,7 @@ import { ProductCollectionWithPreviews } from "types/global"
 import { cache } from "react"
 import HotSales from "@modules/home/components/hotsales"
 import Testimonials from "@modules/home/components/testimonials"
+import InfiniteScroll from "@modules/home/components/infiniteScroll"
 
 export const metadata: Metadata = {
   title: "Home | Shop N Trolly",
@@ -75,6 +76,7 @@ export default async function Home({
   return (
     <>
       <Hero />
+      <InfiniteScroll />
       <div className="">
         <ul className="flex flex-col gap-x-16">
           {collections && (

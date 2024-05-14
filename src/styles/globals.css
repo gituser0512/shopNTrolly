@@ -47,6 +47,31 @@
   input[type="search"]::-webkit-search-results-decoration {
     -webkit-appearance: none;
   }
+
+  .animate-scroll {
+    animation: scroll 40s linear infinite normal forwards;
+  }
+
+  .scroller[data-speed="fast"] .animate-scroll {
+    animation-duration: 20s;
+  }
+
+  .scroller[data-speed="slow"] .animate-scroll {
+    animation-duration: 60s;
+  }
+
+  .scroller[data-direction="right"] .animate-scroll {
+    animation-direction: reverse;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-50% - 1rem));
+    }
+  }
 }
 
 @layer components {
