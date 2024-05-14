@@ -158,6 +158,26 @@ export default async function Footer() {
                     Contact Us
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href="/refund-policy"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-ui-fg-base text-base"
+                  >
+                    Refund Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/shipping-policy"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-ui-fg-base text-base"
+                  >
+                    Shipping Policy
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
