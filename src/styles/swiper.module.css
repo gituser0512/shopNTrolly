@@ -1,0 +1,134 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiperSlide {
+    /* text-align: center; */
+    /* font-size: 18px; */
+  
+    /* Center slide text vertically */
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+  }
+  
+  .autoplayProgress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--swiper-theme-color);
+  }
+  
+  .autoplaySvg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: #556249;
+    fill: none;
+    stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+  }
+  
+  .swiper-pagination-bullet {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: var(--swiper-theme-color);
+    fill: none;
+    stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+  }
+  
+  .swiper-button-prev {
+    background-image: url("/box-arrow-in-left.svg");
+  }
+  
+  .swiper-button-next {
+    background-image: url("/box-arrow-in-right.svg");
+  }
+  
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    content: "";
+  }
+  
+  .swiper-pagination-bullet {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+  }
+  
+  .mainDiv {
+    display: flex;
+    position: absolute; /* move progress indicator */
+    right: 16px;
+    bottom: 16px;
+  }
+  
+  .autoplayProgress1 {
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--swiper-theme-color);
+  }
+  
+  .autoplayProgress2 {
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--swiper-theme-color);
+  }
+  
+  .autoplayProgress1 svg {
+    --progress: 0;
+    position: absolute;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    stroke: #556249;
+    fill: none;
+    stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+  }
+  
+  .autoplayProgress2 svg {
+    --progress: 0;
+    position: absolute;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    stroke: #556249;
+    fill: none;
+    stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+  }
