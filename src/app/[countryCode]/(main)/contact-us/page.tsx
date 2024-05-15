@@ -127,7 +127,7 @@ export default function Component() {
                 Phone: +91 9156834305 / +91 8007529003
               </p>
               <p className="text-md font-medium text-gray-600 dark:text-gray-400 flex flex-col">
-                <span>Opertional Address: </span>
+                <span>Address: </span>
                 <span>102, Aarya Residency, Prayeja City Rd,</span>
                 <span>Pandurang Industrial Area, Nanded, Pune, Pin - 411041, Maharashtra</span>
               </p>
