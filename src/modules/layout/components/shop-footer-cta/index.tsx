@@ -1,8 +1,8 @@
 
 export default function ShopCTA() {
     return (
-      <section className="w-full bg-gray-100 py-12 md:py-16 lg:py-20 dark:bg-gray-800">
-      <div className="container grid grid-cols-1 gap-6 px-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 lg:ml-12">
+      <section className=" bg-gray-100 py-12 md:py-16 lg:py-20 dark:bg-gray-800">
+      <div className=" grid grid-cols-1 gap-6 px-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 lg:ml-12">
         <div className="flex items-start gap-4">
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-black">
             <PackageIcon className="h-6 w-6" />
