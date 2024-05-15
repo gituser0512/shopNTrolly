@@ -11,11 +11,11 @@ const privacyPolicy = [
       },
       {
         id: 2,
-        description:"In case of online purchase customer can return the goods if it is not the same model or the product seems damaged."
+        description:" In case of online purchase customer can return the goods if it is not the same model or the product seems damaged."
       },
       {
         id: 3,
-        description:"User can not return any used product."
+        description:" User can not return any used product."
       },
 ]
 },
@@ -29,7 +29,7 @@ const privacyPolicy = [
       },
       {
         id: 2,
-        description:"if you don't Email or WhatsApp us your full video for any Claim within 2 days after product delivered."
+        description:" if you don't Email or WhatsApp us your full video for any Claim within 2 days after product delivered."
       },
       
 ]
@@ -40,7 +40,7 @@ const privacyPolicy = [
     content: [
       {
         id: 1,
-        description:"If a product is received and is in defective condition ( Dead On Arrival ) or damaged the product will be replaced with a new product. The product has to be shipped back to ViaanaKidsStore with all original packing and accessories with no damage to serial numbers"
+        description:"If a product is received and is in defective condition ( Dead On Arrival ) or damaged the product will be replaced with a new product. The product has to be shipped back to SHOP N TROLLY Office address with all original packing and accessories with no damage to serial numbers"
       },
       {
         id: 2,
