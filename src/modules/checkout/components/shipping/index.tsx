@@ -42,7 +42,7 @@ const Shipping: React.FC<ShippingProps> = ({
 
   const handleSubmit = () => {
     setIsLoading(true)
-    router.push(pathname + "?step=review", { scroll: false })
+    router.push(pathname + "?step=payment", { scroll: false })
   }
 
   const set = async (id: string) => {
@@ -156,7 +156,7 @@ const Shipping: React.FC<ShippingProps> = ({
             disabled={!cart.shipping_methods[0]}
             data-testid="submit-delivery-option-button"
           >
-            Continue to Place Order Request
+            Continue to Payment
           </Button>
         </div>
       ) : (

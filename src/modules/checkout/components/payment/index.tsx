@@ -33,6 +33,8 @@ const Payment = ({
 
   const isOpen = searchParams.get("step") === "payment"
 
+  console.log(cart, "Cart")
+
   const isStripe = cart?.payment_session?.provider_id === "stripe"
   const stripeReady = useContext(StripeContext)
 
@@ -112,7 +114,7 @@ const Payment = ({
             }
           )}
         >
-          Place a Request
+          Payment Method
           {!isOpen && paymentReady && <CheckCircleSolid />}
         </Heading>
         {!isOpen && paymentReady && (
@@ -182,7 +184,7 @@ const Payment = ({
               className="mt-6 bg-[#ffc600] hover:bg-[#ffc600]/40 text-black"
               onClick={handleSubmit}
               isLoading={isLoading}
-              // disabled={(isStripe && !cardComplete) || !cart.payment_session}
+              disabled={(isStripe && !cardComplete) || !cart.payment_session}
               data-testid="submit-payment-button"
             >
               Continue to Place a Request
@@ -194,7 +196,7 @@ const Payment = ({
           </div>
         )}
 
-        {/* <div className={isOpen ? "hidden" : "block"}>
+        <div className={isOpen ? "hidden" : "block"}>
           {cart && paymentReady && cart.payment_session && (
             <div className="flex items-start gap-x-1 w-full">
               <div className="flex flex-col w-1/3">
@@ -238,7 +240,7 @@ const Payment = ({
               </div>
             </div>
           )}
-        </div> */}
+        </div>
       </div>
       <Divider className="mt-8" />
     </div>
