@@ -123,6 +123,11 @@ export default function Component() {
               <p className="text-md font-medium text-gray-600 dark:text-gray-400">
                 Phone: +91 9156834305 / +91 8007529003
               </p>
+              <p className="text-md font-medium text-gray-600 dark:text-gray-400">
+                Opertional Address: 
+                102, Aarya Residency, Prayeja City Rd,
+                Pandurang Industrial Area, Nanded, Pune, Pin - 411041, Maharashtra
+              </p>
             </div>
           </div>
           {/* <div className="ml-8">
