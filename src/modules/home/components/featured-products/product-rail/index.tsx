@@ -31,7 +31,7 @@ export default function ProductRail({
     backgroundColorMap[collection.title as string] || defaultBackgroundColor
 
   return (
-    <div className={`py-12 ${backgroundColor}`}>
+    <div className={`py-12 bg-slate-100`}>
       <div className="flex justify-between mb-8 content-container">
         <h3 className="text-2xl md:text-3xl font-medium">{collection.title}</h3>
         <InteractiveLink href={`/collections/${collection.handle}`}>
