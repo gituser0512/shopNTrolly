@@ -17,7 +17,7 @@ const privacyPolicy = [
     id: 3,
     title: "Payment and billing information.",
     description:
-      "We might collect your billing name, billing address and payment method when you buy a ticket. We NEVER collect your credit card number or credit card expiry date or other details pertaining to your credit card on our website. Credit card information will be obtained and processed by our online payment partner CC Avenue.",
+      "We might collect your billing name, billing address and payment method when you buy a ticket. We NEVER collect your credit card number or credit card expiry date or other details pertaining to your credit card on our website. Credit card information will be obtained and processed by our online payment partner Razorpay.",
   },
   {
     id: 4,
