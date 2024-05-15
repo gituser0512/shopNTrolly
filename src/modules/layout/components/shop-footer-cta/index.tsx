@@ -2,47 +2,40 @@
 export default function ShopCTA() {
     return (
       <section className="w-full bg-gray-100 py-12 md:py-16 lg:py-20 dark:bg-gray-800">
-        <div className="container grid grid-cols-1 gap-6 px-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-          <div className="flex items-start gap-4">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-black">
-              <PackageIcon className="h-6 w-6" />
-            </div>
-            <div className="space-y-1">
-              <h3 className="text-lg font-medium">Free Shipping</h3>
-              <p className="text-gray-500 dark:text-gray-400">You will love at great low prices</p>
-            </div>
+      <div className="container grid grid-cols-1 gap-6 px-14 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 lg:ml-12">
+        <div className="flex items-start gap-4">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-black">
+            <PackageIcon className="h-6 w-6" />
           </div>
-          <div className="flex items-start gap-4">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-black">
-              <CreditCardIcon className="h-6 w-6" />
-            </div>
-            <div className="space-y-1">
-              <h3 className="text-lg font-medium">Flexible Payment</h3>
-              <p className="text-gray-500 dark:text-gray-400">Pay with Multiple Credit Cards</p>
-            </div>
-          </div>
-          {/* <div className="flex items-start gap-4">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-black">
-              <PackageIcon className="h-6 w-6" />
-            </div>
-            <div className="space-y-1">
-              <h3 className="text-lg font-medium">14 Day Return</h3>
-              <p className="text-gray-500 dark:text-gray-400">Within 30 days for an exchange</p>
-            </div>
-          </div> */}
-          <div className="flex items-start gap-4">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-black">
-              <SettingsIcon className="h-6 w-6" />
-            </div>
-            <div className="space-y-1">
-              <h3 className="text-lg font-medium">Premium Support</h3>
-              <p className="text-gray-500 dark:text-gray-400">Outstanding premium support</p>
-            </div>
+          <div className="space-y-1">
+            <h3 className="text-lg font-medium">Free Shipping</h3>
+            <p className="text-gray-500 dark:text-gray-400">You will love at great low prices</p>
           </div>
         </div>
-      </section>
-    )
-  }
+        <div className="flex items-start gap-4">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-black">
+            <CreditCardIcon className="h-6 w-6" />
+          </div>
+          <div className="space-y-1">
+            <h3 className="text-lg font-medium">Flexible Payment</h3>
+            <p className="text-gray-500 dark:text-gray-400">Pay with Multiple Credit Cards</p>
+          </div>
+        </div>
+        <div className="flex items-start gap-4">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-black">
+            <SettingsIcon className="h-6 w-6" />
+          </div>
+          <div className="space-y-1">
+            <h3 className="text-lg font-medium">Premium Support</h3>
+            <p className="text-gray-500 dark:text-gray-400">Outstanding premium support</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+    
+  
   
   function CreditCardIcon(props: any) {
     return (
