@@ -15,7 +15,7 @@ export default async function PageLayout(props: { children: React.ReactNode }) {
     <>
       <Nav />
       {props.children}
-      <ShopCTA />
+
       <Footer />
     </>
   )

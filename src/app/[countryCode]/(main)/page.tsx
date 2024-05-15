@@ -9,6 +9,7 @@ import { cache } from "react"
 import HotSales from "@modules/home/components/hotsales"
 import Testimonials from "@modules/home/components/testimonials"
 import InfiniteScroll from "@modules/home/components/infiniteScroll"
+import ShopCTA from "@modules/layout/components/shop-footer-cta"
 
 export const metadata: Metadata = {
   title: "Home | Shop N Trolly",
@@ -86,6 +87,7 @@ export default async function Home({
       </div>
       {/* <HotSales /> */}
       <Testimonials />
+      <ShopCTA />
     </>
   )
 }
