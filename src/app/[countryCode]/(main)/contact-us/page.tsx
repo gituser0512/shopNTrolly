@@ -1,5 +1,7 @@
 import { Button, Input, Label, Textarea } from "@medusajs/ui"
+import BrandIcon from '../../../../../public/icon.png'
 import { Metadata } from "next"
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: "Contact Us | Shop N Trolly",
@@ -111,7 +113,8 @@ export default function Component() {
         </div>
         <div className="flex items-center">
           <div className="grid gap-4 bg-white p-6 rounded-lg shadow-lg dark:bg-gray-800">
-            <div className="space-y-2">
+            <div className="space-y-2 flex gap-2">
+              <Image src={BrandIcon} width={60} height={60} alt="Shop N Trolly" />
               <p className="text-2xl font-semibold text-gray-900 dark:text-gray-50">
                 Shop N Trolly
               </p>
@@ -123,10 +126,10 @@ export default function Component() {
               <p className="text-md font-medium text-gray-600 dark:text-gray-400">
                 Phone: +91 9156834305 / +91 8007529003
               </p>
-              <p className="text-md font-medium text-gray-600 dark:text-gray-400">
-                Opertional Address: 
-                102, Aarya Residency, Prayeja City Rd,
-                Pandurang Industrial Area, Nanded, Pune, Pin - 411041, Maharashtra
+              <p className="text-md font-medium text-gray-600 dark:text-gray-400 flex flex-col">
+                <span>Opertional Address: </span>
+                <span>102, Aarya Residency, Prayeja City Rd,</span>
+                <span>Pandurang Industrial Area, Nanded, Pune, Pin - 411041, Maharashtra</span>
               </p>
             </div>
           </div>
