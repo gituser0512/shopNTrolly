@@ -21,7 +21,7 @@ export default function ShopCTA() {
               <p className="text-gray-500 dark:text-gray-400">Pay with Multiple Credit Cards</p>
             </div>
           </div>
-          <div className="flex items-start gap-4">
+          {/* <div className="flex items-start gap-4">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-black">
               <PackageIcon className="h-6 w-6" />
             </div>
@@ -29,7 +29,7 @@ export default function ShopCTA() {
               <h3 className="text-lg font-medium">14 Day Return</h3>
               <p className="text-gray-500 dark:text-gray-400">Within 30 days for an exchange</p>
             </div>
-          </div>
+          </div> */}
           <div className="flex items-start gap-4">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-black">
               <SettingsIcon className="h-6 w-6" />

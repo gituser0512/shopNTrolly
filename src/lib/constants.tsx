@@ -31,6 +31,10 @@ export const paymentInfoMap: Record<
     icon: <CreditCard />,
   },
   // Add more payment providers here
+  razorpay: {
+    title: "Razorpay",
+    icon: <CreditCard />,
+  },
 }
 
 // Add currencies that don't need to be divided by 100

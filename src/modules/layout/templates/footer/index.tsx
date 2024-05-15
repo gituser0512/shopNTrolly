@@ -33,7 +33,7 @@ export default async function Footer() {
                 Email: hello@in.shopntrolly.com
               </Text>
               <Text className="txt-compact-small">
-                Phone: hello@in.shopntrolly.com
+                Phone: +91 9156834305 / +91 8007529003
               </Text>
 
             </div>
