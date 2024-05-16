@@ -38,6 +38,8 @@ const Payment = ({
   const isStripe = cart?.payment_session?.provider_id === "stripe"
   const stripeReady = useContext(StripeContext)
 
+  const isRazorpay = cart?.payment_session?.provider_id === 'razorpay'
+
   const paymentReady =
     cart?.payment_session && cart?.shipping_methods.length !== 0
 
@@ -162,6 +164,26 @@ const Payment = ({
 
                 <CardElement
                   options={useOptions as StripeCardElementOptions}
+                  onChange={(e) => {
+                    setCardBrand(
+                      e.brand &&
+                        e.brand.charAt(0).toUpperCase() + e.brand.slice(1)
+                    )
+                    setError(e.error?.message || null)
+                    setCardComplete(e.complete)
+                  }}
+                />
+              </div>
+            )}
+
+            {isRazorpay && (
+              <div className="mt-5 transition-all duration-150 ease-in-out">
+                <Text className="txt-medium-plus text-ui-fg-base mb-1">
+                  Enter your card details:
+                </Text>
+
+                <CardElement
+                  options={useOptions as any}
                   onChange={(e) => {
                     setCardBrand(
                       e.brand &&
