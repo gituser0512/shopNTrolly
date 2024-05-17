@@ -29,8 +29,9 @@ const PaymentButton: React.FC<PaymentButtonProps> = ({ cart, 'data-testid': data
 
   const paymentSession = cart.payment_session as PaymentSession
 
+
   switch (paymentSession.provider_id) {
-    case "stripe":
+    case "razorpay":
       return <RazorpayPaymentButton notReady={notReady} cart={cart} session={paymentSession} data-testid={dataTestId} />
     case "manual":
       return <ManualTestPaymentButton notReady={notReady} data-testid={dataTestId} />
@@ -260,8 +261,6 @@ const RazorpayPaymentButton = ({
   }
 
 
-  console.log(orderData, "order data")
-
   const handlePayment = useCallback(() => {
     const options: RazorpayOptions = {
       callback_url: `${process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL}/razorpay/hooks`,
@@ -317,7 +316,7 @@ const RazorpayPaymentButton = ({
         disabled={submitting || notReady}
         onClick={handlePayment}
       >
-        {submitting ? <Spinner /> : "Checkout"}
+        {submitting ? <Spinner /> : "Place Your Order"}
       </Button>
       {errorMessage && (
         <div className="text-red-500 text-small-regular mt-2">
