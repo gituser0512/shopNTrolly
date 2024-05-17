@@ -287,9 +287,9 @@ const RazorpayPaymentButton = ({
         onPaymentCompleted()
       },
       "prefill": {
-        "name": cart?.billing_address.first_name + " " + cart?.billing_address.last_name,
+        "name": cart?.billing_address.first_name + " " + cart?.billing_address.last_name  ,
         "email": cart?.email,
-        "contact": (cart?.shipping_address?.phone) ?? undefined
+        "contact":( cart?.billing_address?.phone || cart?.shipping_address?.phone) as string
       },
       "notes": {
         "address": cart?.billing_address,

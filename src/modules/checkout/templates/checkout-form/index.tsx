@@ -4,6 +4,7 @@ import Payment from "@modules/checkout/components/payment"
 import Review from "@modules/checkout/components/review"
 import {
   createPaymentSessions,
+  getCart,
   getCustomer,
   listShippingMethods,
 } from "@lib/data"
@@ -41,6 +42,26 @@ export default async function CheckoutForm() {
   // get customer if logged in
   const customer = await getCustomer()
 
+  // const totalPrice =  await getCart(cartId).then((cart) => cart)?.total
+
+  // const result = availableShippingMethods.reduce((acc, manual) => {
+  //   const minSubtotal = manual?.requirements.find(req => req.type === "min_subtotal");
+  //   const maxSubtotal = manual?.requirements.find(req => req.type === "max_subtotal");
+  
+  //   if (totalPrice >= minSubtotal.amount && totalPrice <= maxSubtotal.amount) {
+  //     acc.push(manual);
+  //   }
+  
+  //   return acc;
+  // }, []);
+  
+
+  
+
+  // console.log(availableShippingMethods, "shipping methods")
+  // console.log(result, "after 1shipping methods")
+  // console.log(totalPrice?.total, "totalPrice")
+
   return (
     <div>
       <div className="w-full grid grid-cols-1 gap-y-8">
@@ -51,7 +72,7 @@ export default async function CheckoutForm() {
         <div>
           <Shipping
             cart={cart}
-            availableShippingMethods={availableShippingMethods}
+            availableShippingMethods={availableShippingMethods}  
           />
         </div>
 

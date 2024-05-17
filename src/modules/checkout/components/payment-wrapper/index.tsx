@@ -6,7 +6,7 @@ import React from "react"
 import StripeWrapper from "./stripe-wrapper"
 import { PayPalScriptProvider } from "@paypal/react-paypal-js"
 import { createContext } from "react"
-import RazorpayWrapper from "./razorpay-wrapper"
+
 
 
 type WrapperProps = {
@@ -26,7 +26,6 @@ const Wrapper: React.FC<WrapperProps> = ({ cart, children }) => {
   const paymentSession = cart.payment_session as PaymentSession
 
   const isStripe = paymentSession?.provider_id?.includes("stripe")
-  const isRazorpay = paymentSession?.provider_id?.includes("razorpay");
 
   if (isStripe && paymentSession && stripePromise) {
     return (
@@ -43,16 +42,7 @@ const Wrapper: React.FC<WrapperProps> = ({ cart, children }) => {
   }
 
 
-  if (isRazorpay && paymentSession && razorpayKey) {
-    return (
-      <RazorpayWrapper
-        paymentSession={paymentSession}
-        razorpayKey={razorpayKey}
-      >
-        {children}
-      </RazorpayWrapper>
-    );
-  }
+ 
 
 
   if (

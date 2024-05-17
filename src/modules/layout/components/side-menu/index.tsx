@@ -14,6 +14,7 @@ import Image from "next/image"
 const SideMenuItems = {
   Home: "/",
   Store: "/store",
+  Search: "/search",
   Account: "/account",
   Cart: "/cart",
 }

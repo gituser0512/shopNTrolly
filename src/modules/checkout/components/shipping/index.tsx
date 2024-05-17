@@ -21,11 +21,13 @@ export const dynamic = "force-dynamic"
 type ShippingProps = {
   cart: Omit<Cart, "refundable_amount" | "refunded_total">
   availableShippingMethods: PricedShippingOption[] | null
+  
 }
 
 const Shipping: React.FC<ShippingProps> = ({
   cart,
   availableShippingMethods,
+  
 }) => {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -64,7 +66,7 @@ const Shipping: React.FC<ShippingProps> = ({
   useEffect(() => {
     setIsLoading(false)
     setError(null)
-    console.log(availableShippingMethods, "methods")
+    console.log(availableShippingMethods, "methods 333")
   }, [isOpen])
 
   return (
