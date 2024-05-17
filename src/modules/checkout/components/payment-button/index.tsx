@@ -260,6 +260,8 @@ const RazorpayPaymentButton = ({
   }
 
 
+  console.log(orderData, "order data")
+
   const handlePayment = useCallback(() => {
     const options: RazorpayOptions = {
       callback_url: `${process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL}/razorpay/hooks`,
