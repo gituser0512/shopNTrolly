@@ -13,6 +13,7 @@ export type ProductHit = {
   variants: ProductVariant[]
   collection_handle: string | null
   collection_id: string | null
+  [key: string]: any
 }
 
 type HitProps = {
@@ -40,7 +41,7 @@ const Hit = ({ hit }: HitProps) => {
               className="text-ui-fg-subtle"
               data-testid="search-result-title"
             >
-              {hit.["Product Title"]}
+              {hit?.["Product Title"]}
             </Text>
           </div>
         </div>
