@@ -22,15 +22,15 @@ type HitProps = {
 const Hit = ({ hit }: HitProps) => {
   return (
     <LocalizedClientLink
-      href={`/products/${hit.handle}`}
+      href={`/products/${hit?.["Product Handle"]}`}
       data-testid="search-result"
     >
       <Container
-        key={hit.id}
+        key={hit?.["Product Id"]}
         className="flex sm:flex-col gap-2 w-full p-4 shadow-elevation-card-rest hover:shadow-elevation-card-hover items-center sm:justify-center"
       >
         <Thumbnail
-          thumbnail={hit.thumbnail}
+          thumbnail={hit?.["Product Thumbnail"]}
           size="square"
           className="group h-12 w-12 sm:h-full sm:w-full"
         />
@@ -40,7 +40,7 @@ const Hit = ({ hit }: HitProps) => {
               className="text-ui-fg-subtle"
               data-testid="search-result-title"
             >
-              {hit.title}
+              {hit.["Product Title"]}
             </Text>
           </div>
         </div>
