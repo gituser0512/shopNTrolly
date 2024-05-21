@@ -25,10 +25,11 @@ const ShippingAddress = ({
     "shipping_address.address_1": cart?.shipping_address?.address_1 || "",
     "shipping_address.company": cart?.shipping_address?.company || "",
     "shipping_address.postal_code": cart?.shipping_address?.postal_code || "",
-    "shipping_address.city": cart?.shipping_address?.city || "",
+    "shipping_address.city": cart?.shipping_address?.city || "Pune",
     "shipping_address.country_code":
       cart?.shipping_address?.country_code || countryCode || "",
-    "shipping_address.province": cart?.shipping_address?.province || "",
+    "shipping_address.province":
+      cart?.shipping_address?.province || "Maharashtra",
     email: cart?.email || "",
     "shipping_address.phone": cart?.shipping_address?.phone || "",
   })
@@ -54,10 +55,11 @@ const ShippingAddress = ({
       "shipping_address.address_1": cart?.shipping_address?.address_1 || "",
       "shipping_address.company": cart?.shipping_address?.company || "",
       "shipping_address.postal_code": cart?.shipping_address?.postal_code || "",
-      "shipping_address.city": cart?.shipping_address?.city || "",
+      "shipping_address.city": cart?.shipping_address?.city || "Pune",
       "shipping_address.country_code":
         cart?.shipping_address?.country_code || "",
-      "shipping_address.province": cart?.shipping_address?.province || "",
+      "shipping_address.province":
+        cart?.shipping_address?.province || "Maharashtra",
       email: cart?.email || "",
       "shipping_address.phone": cart?.shipping_address?.phone || "",
     })
@@ -133,7 +135,8 @@ const ShippingAddress = ({
           label="City"
           name="shipping_address.city"
           autoComplete="address-level2"
-          value={formData["shipping_address.city"]}
+          // value={formData["shipping_address.city"]}
+          value="Pune"
           onChange={handleChange}
           required
           data-testid="shipping-city-input"
@@ -153,8 +156,8 @@ const ShippingAddress = ({
           autoComplete="address-level1"
           required
           type="text"
-          value={formData["shipping_address.province"]}
-          // value="Maharashtra"
+          // value={formData["shipping_address.province"]}
+          value="Maharashtra"
           onChange={handleChange}
           data-testid="shipping-province-input"
         />
