@@ -99,18 +99,17 @@ export default async function ProductPage({ params }: Props) {
   const backgroundColorMap: { [key: string]: string } = {
     "Baby Products": "bg-slate-100",
     "Home Essentials": "bg-slate-100",
-    "Stationary": "bg-slate-100",
+    Stationary: "bg-slate-100",
     "Smart Gadgets": "bg-slate-100",
-    "Toys": "bg-slate-100",
+    Toys: "bg-slate-100",
   }
-  
 
   const backgroundColor =
     backgroundColorMap[pricedProduct?.collection?.title.toString()!] ||
     "bg-white"
 
   return (
-    <div className="bg-slate-100">
+    <div className="bg-[#fff6f6]">
       <ProductTemplate
         product={pricedProduct}
         region={region}

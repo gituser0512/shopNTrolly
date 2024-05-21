@@ -21,9 +21,9 @@ export default function ProductRail({
   const backgroundColorMap: { [key: string]: string } = {
     "Baby Products": "bg-slate-100",
     "Home Essentials": "bg-slate-100",
-    "Stationary": "bg-slate-100",
+    Stationary: "bg-slate-100",
     "Smart Gadgets": "bg-slate-100",
-    "Toys": "bg-slate-100",
+    Toys: "bg-slate-100",
   }
 
   const defaultBackgroundColor = "#f5f5f5"
@@ -31,7 +31,7 @@ export default function ProductRail({
     backgroundColorMap[collection.title as string] || defaultBackgroundColor
 
   return (
-    <div className={`py-12 bg-slate-100`}>
+    <div className={`py-12 bg-[#fff6f6]`}>
       <div className="flex justify-between mb-8 content-container">
         <h3 className="text-2xl md:text-3xl font-medium">{collection.title}</h3>
         <InteractiveLink href={`/collections/${collection.handle}`}>

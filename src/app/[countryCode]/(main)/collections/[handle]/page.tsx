@@ -67,20 +67,20 @@ export default async function CollectionPage({ params, searchParams }: Props) {
   )
 
   if (!collection) {
-    notFound() 
+    notFound()
   }
 
   const backgroundColorMap: { [key: string]: string } = {
     "Baby Products": "bg-slate-100",
     "Home Essentials": "bg-slate-100",
-    "Stationary": "bg-slate-100",
+    Stationary: "bg-slate-100",
     "Smart Gadgets": "bg-slate-100",
-    "Toys": "bg-slate-100",
+    Toys: "bg-slate-100",
   }
-  
+
   const backgroundColor = backgroundColorMap[collection.title] || "bg-white"
   return (
-    <div className={`${backgroundColor}`}>
+    <div className="bg-[#fff6f6]">
       <CollectionTemplate
         collection={collection}
         page={page}
