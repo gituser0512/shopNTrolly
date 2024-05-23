@@ -34,7 +34,7 @@ const Hero = () => {
       modules={[Autoplay, Pagination, Navigation]}
     >
       <SwiperSlide>
-        <div className="h-[50vh] md:h-[70vh] w-full relative">
+        <div className="h-[50vh] md:h-[80vh] w-full relative">
           <div className="text-white absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:text-left small:justify-end small:items-start small:p-32">
             <h1 className="text-2xl font-semibold md:text-3xl-semi drop-shadow-md shadow-black">
               Explore Our Collection
@@ -46,7 +46,7 @@ const Hero = () => {
               <p className="font-semibold">Explore products</p>
             </UnderlineLink> */}
             <Link href="/store">
-              <Button variant="secondary" size="xlarge">
+              <Button variant="secondary" size="large">
                 Explore products <ArrowRight />
               </Button>
             </Link>
@@ -56,9 +56,9 @@ const Hero = () => {
             src={HeroImg}
             loading="eager"
             priority={true}
-            quality={90}
+            quality={100}
             alt="Photo by @thevoncomplex https://unsplash.com/@thevoncomplex"
-            className="absolute inset-0 object-cover z-0 brightness-50"
+            className="absolute inset-0 object-cover z-0 brightness-75"
             draggable="false"
             fill
             sizes="100vw"
@@ -66,7 +66,7 @@ const Hero = () => {
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="h-[50vh] md:h-[70vh] w-full relative">
+        <div className="h-[50vh] md:h-[80vh] w-full relative">
           <div className="text-white h-full absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:text-left small:justify-end small:items-start small:p-32">
             <h1 className="text-2xl font-semibold md:text-3xl-semi drop-shadow-md shadow-black">
               Explore Our Collection
@@ -78,7 +78,7 @@ const Hero = () => {
               <p className="font-semibold">Explore products</p>
             </UnderlineLink> */}
             <Link href="/store">
-              <Button variant="secondary" size="xlarge">
+              <Button variant="secondary" size="large">
                 Explore products <ArrowRight />
               </Button>
             </Link>
@@ -90,7 +90,7 @@ const Hero = () => {
             priority={true}
             quality={90}
             alt="Photo by @thevoncomplex https://unsplash.com/@thevoncomplex"
-            className="absolute inset-0 object-cover z-0 brightness-50"
+            className="absolute inset-0 object-cover z-0 brightness-75"
             draggable="false"
             fill
             sizes="100vw"
