@@ -20,7 +20,7 @@ export default async function Nav() {
             <div className="h-full">
               <SideMenu regions={regions} />
             </div>
-            <Badge color="orange" className="hidden sm:block font-workSans">
+            <Badge color="orange" className="hidden sm:block">
               🚛 <span className="font-semibold">Shipping to Pune Only!</span>
             </Badge>
           </div>
@@ -39,7 +39,7 @@ export default async function Nav() {
             </Link>
             <LocalizedClientLink
               href="/"
-              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase hidden md:block font-workSans"
+              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase hidden md:block"
               data-testid="nav-store-link"
             >
               Shop N Trolly

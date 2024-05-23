@@ -109,7 +109,7 @@ export default async function ProductPage({ params }: Props) {
     "bg-white"
 
   return (
-    <div className="bg-[#fff6f6]">
+    <div>
       <ProductTemplate
         product={pricedProduct}
         region={region}

@@ -59,17 +59,8 @@ module.exports = {
         "3xl": "2rem",
       },
       fontFamily: {
-        sans: [
-          "Work Sans",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "Segoe UI",
-          "Roboto",
-          "Helvetica Neue",
-          "Ubuntu",
-          "sans-serif",
-        ],
-        workSans: ["Work Sans", "sans-serif"],
+        sans: ["DM Sans", "sans-serif"],
+        dmSans: ["DM Sans", "sans-serif"],
       },
       keyframes: {
         ring: {

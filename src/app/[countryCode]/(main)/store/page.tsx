@@ -22,7 +22,7 @@ export default async function StorePage({ searchParams, params }: Params) {
   const { sortBy, page } = searchParams
 
   return (
-    <div className="bg-[#fff6f6]">
+    <div>
       <StoreTemplate
         sortBy={sortBy}
         page={page}

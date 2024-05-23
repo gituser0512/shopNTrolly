@@ -80,7 +80,7 @@ export default async function CollectionPage({ params, searchParams }: Props) {
 
   const backgroundColor = backgroundColorMap[collection.title] || "bg-white"
   return (
-    <div className="bg-[#fff6f6]">
+    <div>
       <CollectionTemplate
         collection={collection}
         page={page}
