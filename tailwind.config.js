@@ -59,7 +59,7 @@ module.exports = {
         "3xl": "2rem",
       },
       fontFamily: {
-        sans: ["DM Sans", "sans-serif"],
+        sans: ["__DM_Sans_420ee6", "__DM_Sans_Fallback_420ee6", "sans-serif"],
         dmSans: ["DM Sans", "sans-serif"],
       },
       keyframes: {
