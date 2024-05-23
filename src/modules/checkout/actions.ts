@@ -8,8 +8,13 @@ import {
   deleteDiscount,
   setPaymentSession,
   updateCart,
+  updateCustomer,
 } from "@lib/data"
-import { GiftCard, StorePostCartsCartReq } from "@medusajs/medusa"
+import {
+  GiftCard,
+  StorePostCartsCartReq,
+  StorePostCustomersCustomerReq,
+} from "@medusajs/medusa"
 import { revalidateTag } from "next/cache"
 import { redirect } from "next/navigation"
 
@@ -145,9 +150,28 @@ export async function setAddresses(currentState: unknown, formData: FormData) {
       phone: formData.get("billing_address.phone"),
     } as StorePostCartsCartReq
 
+  const customer = {
+    billing_address: {
+      first_name: formData.get("billing_address.first_name"),
+      last_name: formData.get("billing_address.last_name"),
+      company: formData.get("billing_address.company"),
+      address_1: formData.get("billing_address.address_1"),
+      address_2: formData.get("billing_address.address_2"),
+      city: formData.get("billing_address.city"),
+      postal_code: formData.get("billing_address.postal_code"),
+      province: formData.get("billing_address.province"),
+      country_code: formData.get("billing_address.country_code"),
+      phone: formData.get("billing_address.phone"),
+    },
+  } as StorePostCustomersCustomerReq
+
   try {
     await updateCart(cartId, data)
     revalidateTag("cart")
+
+    await updateCustomer(customer).then(() => {
+      revalidateTag("customer")
+    })
   } catch (error: any) {
     return error.toString()
   }
