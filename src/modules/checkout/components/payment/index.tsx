@@ -174,7 +174,6 @@ const Payment = ({
               </div>
             )}
 
-
             <ErrorMessage
               error={error}
               data-testid="payment-method-error-message"
@@ -188,7 +187,7 @@ const Payment = ({
               disabled={(isStripe && !cardComplete) || !cart.payment_session}
               data-testid="submit-payment-button"
             >
-              Continue to Place a Request
+              Continue to Place a Order
             </Button>
           </div>
         ) : (

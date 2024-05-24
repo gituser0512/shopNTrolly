@@ -31,7 +31,7 @@ export default function OrderCompletedTemplate({
             level="h1"
             className="flex flex-col gap-y-3 text-ui-fg-base text-3xl"
           >
-            <span>Thank you! Your request was placed successfully.</span>
+            <span>Thank you! Your order was placed successfully.</span>
           </Heading>
           <OrderDetails order={order} />
           <Heading level="h2" className="flex flex-row text-3xl-regular">

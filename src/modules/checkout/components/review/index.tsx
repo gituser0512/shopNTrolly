@@ -31,7 +31,7 @@ const Review = ({
             }
           )}
         >
-          Place Order Request
+          Place Order
         </Heading>
       </div>
       {isOpen && previousStepsCompleted && (
